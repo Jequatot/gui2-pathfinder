@@ -1,6 +1,6 @@
 var db;
 
-function dpush() {
+function db_push(category, index, properties) {
 	// Initialize Firebase
 	var config = {
 		apiKey: "AIzaSyDFA65nznccdfEIbttyfCl1LHt40PD-Jpc",
@@ -13,11 +13,12 @@ function dpush() {
 
 	firebase.initializeApp(config);
 
-	newelem = firebase.database().ref("race").push("4")
+	
+	newelem = firebase.database().ref(category).child(index)
 	newelem.set({
-		name: "Human",
-		size: "Medium",
-		speed: 30
+		name: properties[0],
+		size: properties[1],
+		speed: properties[2]
 	});
 }
 
