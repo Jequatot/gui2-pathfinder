@@ -1,6 +1,6 @@
 var db;
 
-function db_init(uid) {
+function dpush() {
 	// Initialize Firebase
 	var config = {
 		apiKey: "AIzaSyDFA65nznccdfEIbttyfCl1LHt40PD-Jpc",
@@ -13,23 +13,12 @@ function db_init(uid) {
 
 	firebase.initializeApp(config);
 
-
-	class pclass{
-		constructor(name, desc){
-			this.name = name;
-			this.desc = desc;
-		}
-	}
-
-	var db_class = new Array();
-
-	db.ref("class").once("value").then(
-		function(classlist) {
-			classlist.forEach(function(childclass) {
-				db_class.push(new pclass(childclass.child("name").val(), childclass.child("desc").val()));
-			});
-		});
-	return db_class
+	newelem = firebase.database().ref("race").push("4")
+	newelem.set({
+		name: "Human",
+		size: "Medium",
+		speed: 30
+	});
 }
 
 function db_load(data){
