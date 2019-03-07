@@ -1,0 +1,38 @@
+# the website does not actually pull from this file
+# this is just an example
+# it is likely not up to date
+
+# for places where scores are concerned (ex. modifiers)
+# the order is:
+# CON STR DEX WIS INT CHA
+
+{
+  "race" : [
+    {
+	  "name" : "Dwarf",
+      "modifiers" : [2, 0, 0, 2, 0, -2],
+      "size" : "Medium",
+      "speed" : 20
+    },
+    {
+	  "name" : "Elf",
+      "modifiers" : [2, 2, -1],
+      "size" : "Medium",
+      "speed" : 30
+    }
+  ],
+  "class" : {
+    "017" : {
+      "desc" : "help",
+      "name" : "me"
+    },
+    "018" : {
+      "desc" : "scary",
+      "name" : "barry"
+    },
+    "019" : {
+      "desc" : "bad",
+      "name" : "clown"
+    }
+  }
+}
