@@ -1,30 +1,366 @@
 {
-  "race" : [
+  "login" : {
+    "user" : [
+      {
+	      "uid" : "00000000",
+		    "name" : "admin",
+		    "pwd" : "admin"
+	    },
+	    {
+	      "uid" : "00000f56",
+		    "name" : "snow",
+		    "pwd" : "snowglobe"
+	    },
+	    {
+	      "uid" : "b0d00b0d",
+		    "name" : "david516",
+		    "pwd" : "password"
+	    }
+	  ]
+  },
+  "pcs" : [
     {
-	  "name" : "Dwarf",
-      "modifiers" : [2, 0, 0, 2, 0, -2],
-      "size" : "Medium",
-      "speed" : 20
-    },
+	    "name" : "Basil",
+	    "scores" : [8, 6, 11, 13, 18, 16],
+	    "class" : 2,
+	    "race" : 0,
+	    "level" : 1,
+	    "feats" : [2],
+	    "skills" : [0],
+	    "spells" : [1],
+	    "uid" : "00000f56",
+	    "public" : 0
+	  },
     {
-	  "name" : "Elf",
-      "modifiers" : [2, 2, -1],
-      "size" : "Medium",
-      "speed" : 30
-    }
+	    "name" : "Meatball",
+	    "scores" : [16, 18, 15, 12, 4, 6],
+	    "class" : 0,
+	    "race" : 2,
+	    "level" : 2,
+	    "feats" : [1],
+	    "skills" : [2],
+	    "spells" : [],
+	    "uid" : "b0d00b0d",
+	    "public" : 1
+	  },
+    {
+	    "name" : "Vladimir Tlatoani",
+	    "scores" : [13, 12, 17, 10, 4, 15],
+	    "class" : 0,
+	    "race" : 1,
+	    "level" : 1,
+	    "feats" : [],
+	    "skills" : [1],
+	    "spells" : [],
+	    "uid" : "00000f56",
+	    "public" : 1
+	  }
   ],
-  "class" : {
-    "017" : {
-      "desc" : "help",
-      "name" : "me"
-    },
-    "018" : {
-      "desc" : "scary",
-      "name" : "barry"
-    },
-    "019" : {
-      "desc" : "bad",
-      "name" : "clown"
-    }
+  "rule" : {
+      "ability_score" : [
+  	  {
+  	    "name" : "CON"
+  	  },
+  	  {
+  	    "name" : "STR"
+  	  },
+  	  {
+  	    "name" : "DEX"
+  	  },
+  	  {
+  	    "name" : "WIS"
+  	  },
+  	  {
+  	    "name" : "INT"
+  	  },
+  	  {
+  	    "name" : "CHA"
+  	  }
+  	],
+  	"language" : [
+  	  {
+  	    "name" : "Common"
+  	  },
+  	  {
+  	    "name" : "Elven"
+  	  },
+  	  {
+  	    "name" : "Dwarven"
+  	  }
+  	],
+  	"skill" : [
+  	  {
+  	    "name" : "Acrobatics",
+  		  "long_desc" : "<COMING SOON>",
+  		  "short_desc" : "<COMING SOON>",
+  		  "armor_penalty" : 1,
+  		  "ability" : 2
+  	  },
+  	  {
+  	    "name" : "Appraise",
+  		  "long_desc" : "<COMING SOON>",
+  		  "short_desc" : "<COMING SOON>",
+  		  "armor_penalty" : 0,
+  		  "ability" : 4
+  	  },
+  	  {
+  	    "name" : "Bluff",
+  		  "long_desc" : "<COMING SOON>",
+  		  "short_desc" : "<COMING SOON>",
+  		  "armor_penalty" : 0,
+  		  "ability" : 5
+  	  },
+  	  {
+  	    "name" : "Climb",
+  		  "long_desc" : "<COMING SOON>",
+  		  "short_desc" : "<COMING SOON>",
+  		  "armor_penalty" : 1,
+  		  "ability" : 1
+  	  },
+  	  {
+  	    "name" : "Craft",
+  		  "long_desc" : "<COMING SOON>",
+  		  "short_desc" : "<COMING SOON>",
+  		  "armor_penalty" : 0,
+  		  "ability" : 4
+  	  }
+  	],
+  	"feats" : [
+  	  {
+  	    "name" : "Accomplished Sneak Attacker"
+  	  },
+  	  {
+  	    "name" : "Acrobatic"
+  	  },
+  	  {
+  	    "name" : "Cloud Step"
+  	  }
+  	],
+  	"racial_feats" : [
+  	  {
+  	    "name" : "Bonus Feat",
+  		  "desc" : "Select 1 extra feat at 1st level."
+  	  },
+  	  {
+  	    "name" : "Skilled",
+  		  "desc" : "Select 1 additional skill rank per level."
+      },
+  	  {
+  	    "name" : "Human Versatility",
+  		  "desc" : "Add +2 to your choice of ability score."
+      },
+  	  {
+  	    "name" : "Elven Immunities",
+  		  "desc" : "Immune to magic sleeps effects. Gain +2 to saving throws against enchantment spells and effects."
+      },
+  	  {
+  	    "name" : "Keen Senses",
+  		  "desc" : "+2 to Perception"
+      },
+  	  {
+  	    "name" : "Elven Magic",
+  		  "desc" : "+2 to overcome spell resistance. +2 to identify magic items."
+      },
+  	  {
+  	    "name" : "Weapon Familiarity (Elven)",
+  		  "desc" : "Proficient with longbows, longswords, rapiers, and shortbows. Treat elven weapons as martial weapons."
+      },
+  	  {
+  	    "name" : "Low-Light Vision",
+  		  "desc" : "See twice as far as humans in dim light."
+      },
+  	  {
+  	    "name" : "Defensive Training",
+  		  "desc" : "+4 to AC against giants."
+      },
+  	  {
+  	    "name" : "Hardy",
+  		  "desc" : "+2 on saving throws against poison or spells."
+      },
+  	  {
+  	    "name" : "Stability",
+  		  "desc" : "+4 to resististing tripping or a bull rush."
+      },
+  	  {
+  	    "name" : "Greed",
+  		  "desc" : "+2 to Appraise checks on nonmagical precious goods."
+      },
+  	  {
+  	    "name" : "Stonecunning",
+  		  "desc" : "+2 to Perception to notice unusual stonework, indicating traps or hidden doors. Recieve a check to notice such features when within 10 feet of them, even if not looking."
+      },
+  	  {
+  	    "name" : "Darkvision",
+  		  "desc" : "Can see perfectly in the dark up to 60 feet."
+      },
+  	  {
+  	    "name" : "Hatred",
+  		  "desc" : "+1 to attack rolls against orc or goblinoid creatures."
+      },
+  	  {
+  	    "name" : "Weapon Familiarity (Dwarven)",
+  		  "desc" : "Proficient with battleaxes, heavy picks, and warhammers. Treat dwarven weapons as martial weapons."
+      }
+  	],
+  	"class_feats" : [
+  	  {
+  	    "name" : "Bonus Feat"
+  	  },
+  	  {
+  	    "name" : "Nature Bond"
+  	  },
+  	  {
+  	    "name" : "Nature Sense"
+  	  },
+  	  {
+  	    "name" : "Orisons"
+  	  },
+  	  {
+  	    "name" : "Wild Empathy"
+  	  },
+  	  {
+  	    "name" : "Arcane Bond"
+  	  },
+  	  {
+  	    "name" : "Arcane School"
+  	  },
+  	  {
+  	    "name" : "Cantrips"
+  	  },
+  	  {
+  	    "name" : "Scribe Scroll"
+  	  }
+  	],
+  	"magic_schools" : [
+  	  {
+  	    "name" : "abjuration"
+  	  },
+  	  {
+  	    "name" : "conjuration"
+  	  },
+  	  {
+  	    "name" : "divination"
+  	  },
+  	  {
+  	    "name" : "enchantment"
+  	  },
+  	  {
+  	    "name" : "evocation"
+  	  },
+  	  {
+  	    "name" : "illusion"
+  	  },
+  	  {
+  	    "name" : "necromancy"
+  	  },
+  	  {
+  	    "name" : "transmutation"
+  	  }
+  	],
+  	"spell" : [
+  	  {
+  	    "name" : "Abeyance",
+  	    "school" : 0,
+  	    "time" : "1 minute"
+        },
+  	  {
+  	    "name" : "Abhorrent Blight",
+  	    "school" : 6,
+  	    "time" : "1 action"
+  	  },
+  	  {
+  	    "name" : "Ablative Barrier",
+  	    "school" : 1,
+  	    "time" : "1 action"
+  	  }
+  	],
+  	"race" : [
+  	  {
+  	    "name" : "Human",
+  	    "modifier" : [0, 0, 0, 0, 0, 0],
+  	    "size" : "Medium",
+  	    "speed" : 30,
+  	    "language" : [0],
+  	    "racial_feats" : [0, 1, 2]
+  	  },
+  	  {
+  	    "name" : "Elf",
+  	    "modifier" : [-2, 0, 2, 0, 2, 0],
+  	    "size" : "Medium",
+  	    "speed" : 30,
+  	    "language" : [0, 1],
+  	    "racial_feats" : [3, 4, 5, 6, 7]
+  	  },
+  	  {
+  	    "name" : "Dwarf",
+  	    "modifier" : [2, 0, 0, 2, 0, -2],
+  	    "size" : "Medium",
+  	    "speed" : 20,
+  	    "language" : [0, 2],
+  	    "racial_feats" : [8, 9, 10, 11, 12, 13, 14, 15]
+  	  }
+  	],
+    "class" : [
+  	  {
+  	    "name" : "Fighter",
+  		  "short_desc" : "Exceptional battle prowess and tactical skill.",
+  		  "long_desc" : "<COMING SOON>",
+  		  "hit_dice" : "d10",
+  		  "skill" : [3, 4],
+  		  "skill_rank_per_lev" : 2,
+  		  "spells" : [],
+  		  "level_bonus" :
+        [
+  		    {
+  		      "attack_bonus" : 1,
+  		      "fort_save" : 2,
+  			    "ref_save" : 0,
+  			    "will_save" : 0,
+  			    "special" : [0],
+  			    "spellcount" : []
+  		    }
+  		  ]
+  	  },
+  	  {
+  	    "name" : "Druid",
+  		  "short_desc" : "Nature boy.",
+  		  "long_desc" : "<COMING SOON>",
+  		  "hit_dice" : "d8",
+  		  "skill" : [3, 4],
+  		  "skill_rank_per_lev" : 4,
+  		  "spells" : [],
+  		  "level_bonus" :
+        [
+  		    {
+  		      "attack_bonus" : 0,
+  		      "fort_save" : 2,
+  			    "ref_save" : 0,
+  			    "will_save" : 2,
+  			    "special" : [1, 2, 3, 4],
+  			    "spellcount" : [3, 1]
+  		    }
+  		  ]
+  	  },
+  	  {
+  	    "name" : "Wizard",
+  		  "short_desc" : "Smart.",
+  		  "long_desc" : "<COMING SOON>",
+  		  "hit_dice" : "d6",
+  		  "skill" : [1, 4],
+  		  "skill_rank_per_lev" : 2,
+  		  "spells" : [1, 2],
+  		  "level_bonus" :
+        [
+  		    {
+  		      "attack_bonus" : 0,
+  		      "fort_save" : 0,
+  			    "ref_save" : 0,
+  			    "will_save" : 2,
+  			    "special" : [5, 6, 7, 8],
+  			    "spellcount" : [3, 1]
+  		    }
+  		  ]
+  	  }
+  	]
   }
 }
