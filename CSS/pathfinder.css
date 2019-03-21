@@ -10,6 +10,7 @@ body{
     background-image: linear-gradient(red, #831600);
   	background-repeat: repeat-x;
     background-color: #831600;
+    /*stanley here*/
     min-height: 2000px;
     min-width: 800px;
 }
