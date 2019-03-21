@@ -13,7 +13,7 @@ function db_push(category, index, properties) {
 
 	firebase.initializeApp(config);
 
-	
+
 	newelem = firebase.database().ref(category).child(index)
 	newelem.set({
 		name: properties[0],
