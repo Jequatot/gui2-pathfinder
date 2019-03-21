@@ -4,10 +4,47 @@
   March 21, 2019
   GUI II Pathfinder Group 6, css
 */
+
+/* Basic bg Sam imported from a GUI I project */
 body{
     background-image: linear-gradient(red, #831600);
   	background-repeat: repeat-x;
     background-color: #831600;
     min-height: 2000px;
     min-width: 800px;
+}
+/*Customizes the tabs - an example Sam had from GUI I
+#tabs{
+    max-width: 850px;
+    position: relative;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #343131;
+    border: 0px;
+}
+
+#tabs .ui-widget-header{
+    background: #CE0802;
+    border: 0px;
+}
+*/
+
+/* Set the individual bg colors of the tabs */
+#tabs-1{
+    background-color: yellow;
+}
+#tabs-2{
+    background-color: #5355f4;
+}
+#tabs-3{
+    background-color: green;
+}
+#tabs-4{
+    background-color: red;
+}
+#tabs-5{
+    background-color: orange;
 }

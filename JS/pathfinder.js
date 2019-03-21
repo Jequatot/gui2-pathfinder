@@ -4,3 +4,8 @@
   March 21, 2019
   GUI II Pathfinder Group 6, javascript
 */
+
+//Enables jqueryui tab functionality
+$(function(){
+    $("#tabs").tabs();
+});
