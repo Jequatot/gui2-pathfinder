@@ -35,9 +35,6 @@
     <!-- EX JS file -->
     <script src="JS/example.js"></script>
 
-    <!-- Local project JS file -->
-    <script src="JS/pathfinder.js"></script>
-
     <meta charset="utf-8">
     <title>UML Pathfinder Group 6</title>
   </head>
@@ -55,21 +52,132 @@
         </ul>
 
         <!-- Tab Content -->
+
+        <!-- Character Tab -->
         <div id="tabs-1">
             <p>Character tab.</p>
         </div>
+
+        <!-- Classes Tab -->
         <div id="tabs-2">
-            <p>Classes tab.</p>
+            <div id="classes_bg">
+
+                <!-- Sets up Titles: Name and Short Description -->
+                <div id="class_label" class="name_box"><p>Name of Class</p></div>
+                <div id="summary_label" class="desc_box"><p>Short Summary</p></div>
+                <hr></hr>
+
+                <!-- Sets up Fighter Button, Name, and Short Description -->
+                <input type="radio" id="Class_Figher_Input" name="Class_Selection" value="Fighter" onclick="change_class()">
+                <div id="Class_Fighter" class="name_box"></div>
+                <div id="Fighter_Desc" class="desc_box"></div>
+                <br></br>
+
+                <!-- Sets up Druid Button, Name, and Short Description -->
+                <input type="radio" id="Class_Druid_Input" name="Class_Selection" value="Druid" onclick="change_class()">
+                <div id="Class_Druid" class="name_box"></div>
+                <div id="Druid_Desc" class="desc_box"></div>
+                <br></br>
+
+                <!-- Sets up Wizard Button, Name, and Short Description -->
+                <input type="radio" id="Class_Wizard_Input" name="Class_Selection" value="Wizard" onclick="change_class()">
+                <div id="Class_Wizard" class="name_box"></div>
+                <div id="Wizard_Desc" class="desc_box"></div>
+                <br></br>
+            </div>
         </div>
+
+        <!-- Races Tab -->
         <div id="tabs-3">
-            <p>Races tab.</p>
+          <div id="races_bg">
+              <!-- Sets up Titles: Name and Short Description -->
+            <div id="race_label" class="name_box"><p>Name of Race</p></div>
+            <div id="summary_label" class="desc_box"><p>Short Summary</p></div>
+            <hr></hr>
+                <!-- Sets up Human Button, Name, and Short Description -->
+              <input type="radio" id="Race_Human_Input" name="Race_Selection" value ="Human"onclick="change_race()">
+              <div id="Race_Human" class="name_box"></div>
+              <div id="Human_Desc" class="desc_box"></div>
+              <br></br>
+                <!-- Sets up Elf Button, Name, and Short Description -->
+              <input type="radio" id="Race_Elf_Input" name="Race_Selection"value ="Elf"onclick="change_race()">
+              <div id="Race_Elf" class="name_box"></div>
+              <div id="Elf_Desc" class="desc_box"></div>
+              <br></br>
+                <!-- Sets up Dwarf Button, Name, and Short Description -->
+              <input type="radio" id="Race_Dwarf_Input" name="Race_Selection" value ="Dwarf"onclick="change_race()">
+              <div id="Race_Dwarf" class="name_box"></div>
+              <div id="Dwarf_Desc" class="desc_box"></div>
+              <br></br>
+
+          </div>
         </div>
+
+        <!-- Spells Tab -->
         <div id="tabs-4">
-            <p>Spells tab.</p>
+            <div id="spells_bg">
+                <!-- Hardcoded for now, probably want to make this dynamic -->
+                <p>Level 0 Spells</p>
+
+                <!-- Drop-down 1 -->
+                <select>
+                  <option id="Spell1_List1" value = ""> spell1 </option>
+                  <option id="Spell2_List1" value = ""> spell2 </option>
+                </select>
+                <br></br>
+
+                <!-- Drop-down 2 -->
+                <select>
+                  <option id="Spell1_List2" value = ""> spell1 </option>
+                  <option id="Spell2_List2" value = ""> spell2 </option>
+                </select>
+                <br></br>
+
+                <!-- Drop-down 3 -->
+                <select>
+                  <option id="Spell1_List3" value = ""> spell1 </option>
+                  <option id="Spell2_List3" value = ""> spell2 </option>
+                </select>
+                <br></br>
+            </div>
         </div>
+
+        <!-- Feats Tab -->
         <div id="tabs-5">
-            <p>Feats tab.</p>
+          <div id="feats_bg">
+              <div id="Feat_Chart">
+                  <!-- Feat Chart Heading -->
+                  <div id="feat_chart_name" class="name_box"><p>Feat Name</p></div>
+                  <div id="feat_chart_prereq" class="name_box"><p>Prereq</p></div>
+                  <div id="feat_chart_benefit" class="name_box"><p>Benefit</p></div>
+
+                  <!-- The feats will be dynamically added to this area in JS -->
+                  <hr></hr>
+              </div>
+
+            <!-- The three forms -->
+            <form>
+              Name of Feat:<br>
+               <textarea id="feat_name_textbox" rows="1" cols="30"></textarea>
+               <br>
+               <br>
+              Preq of Feat:<br>
+               <textarea id="feat_preq_textbox" rows="1" cols="50"></textarea>
+               <br>
+               <br>
+              Benefit of Feat:<br>
+               <textarea id="feat_benefit_textbox" rows="1" cols="50"></textarea>
+               <br>
+               <br>
+
+               <!-- Add Feat Button -->
+               <button type="button" onclick="add_to_feat_chart()"> Add Feat </button>
+            </form>
+          </div>
         </div>
     </div>
+
+    <!-- Local project JS file -->
+    <script src="JS/pathfinder.js"></script>
   </body>
 </html>

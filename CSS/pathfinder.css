@@ -47,4 +47,65 @@ body{
 }
 #tabs-5{
     background-color: orange;
+    min-height: 800px;
+}
+#Feat_Chart{
+    background-color: white;
+}
+
+/*Sets the White bg color found in Classes and Races tabs*/
+#classes_bg, #races_bg
+{
+    background-color: white;
+}
+
+/* Separate the Names from the Short Desc. in Class Tab */
+.name_box > p{
+    margin-left: 50px;
+}
+.name_box{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    /*
+    border-style: solid;
+    border-color: black;
+    border-radius: 1px;
+    */
+}
+
+.desc_box > p{
+    margin-left: 30px;
+}
+.desc_box{
+    display: inline-block;
+    width: 1000px;
+    text-align: left;
+    /*
+    border-style: solid;
+    border-color: black;
+    border-radius: 1px;
+    */
+}
+
+/* Styles the font in the Spells tab */
+#spells_bg > p{
+    font-size: 36px;
+    font-weight: 150;
+}
+
+/* Styles the Feat chart */
+#Feat_Chart{
+    float: right;
+    border-style: solid;
+    border-color: black;
+    border-radius: 1px;
+    min-height: 400px;
+    min-width: 800px;
+}
+
+/* Styles the feat textboxes */
+#feat_preq_textbox, #feat_benefit_textbox{
+    width: 500px;
+    height: 200px;
 }
