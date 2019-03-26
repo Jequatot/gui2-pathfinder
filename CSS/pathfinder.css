@@ -66,6 +66,7 @@ body{
 .name_box{
     display: inline-block;
     min-width: 200px;
+    max-width: 200px;
     text-align: center;
     /*
     border-style: solid;
@@ -80,6 +81,7 @@ body{
 .desc_box{
     display: inline-block;
     min-width: 800px;
+    max-width: 800px;
     text-align: left;
     /*
     border-style: solid;
@@ -106,7 +108,15 @@ body{
 }
 
 /* Styles the feat textboxes */
+#feat_name_textbox{
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 20px;
+    max-height: 20px;
+}
 #feat_preq_textbox, #feat_benefit_textbox{
     min-width: 300px;
-    height: 200px;
+    max-width: 300px;
+    min-height: 200px;
+    max-height: 200px;
 }
