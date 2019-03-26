@@ -79,7 +79,7 @@ body{
 }
 .desc_box{
     display: inline-block;
-    width: 1000px;
+    width: 800px;
     text-align: left;
     /*
     border-style: solid;
@@ -101,11 +101,12 @@ body{
     border-color: black;
     border-radius: 1px;
     min-height: 400px;
-    min-width: 800px;
+    min-width: 700px;
+    text-align: center;
 }
 
 /* Styles the feat textboxes */
 #feat_preq_textbox, #feat_benefit_textbox{
-    width: 500px;
+    width: 400px;
     height: 200px;
 }
