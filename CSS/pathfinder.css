@@ -107,6 +107,6 @@ body{
 
 /* Styles the feat textboxes */
 #feat_preq_textbox, #feat_benefit_textbox{
-    min-width: 400px;
+    min-width: 300px;
     height: 200px;
 }
