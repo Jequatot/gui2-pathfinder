@@ -17,5 +17,6 @@ function print(){
 }
 
 function push_human() {
-	db_push("race", db.race.length, ["Human", "Medium", 30])
+	//function push_pc(name, scores, pclass, race, level, feats, skills, spells, uid, publicity)
+	push_pc("Rafael2", [10, 11, 10, 10, 10, 10], 0, 0, 1, [], [0], [], "b0d00b0d", 0);
 }

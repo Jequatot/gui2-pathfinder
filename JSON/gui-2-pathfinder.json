@@ -1,366 +1,335 @@
 {
   "login" : {
-    "user" : [
-      {
-	      "uid" : "00000000",
-		    "name" : "admin",
-		    "pwd" : "admin"
-	    },
-	    {
-	      "uid" : "00000f56",
-		    "name" : "snow",
-		    "pwd" : "snowglobe"
-	    },
-	    {
-	      "uid" : "b0d00b0d",
-		    "name" : "david516",
-		    "pwd" : "password"
-	    }
-	  ]
+    "user" : [ {
+      "name" : "admin",
+      "pwd" : "admin",
+      "uid" : "00000000"
+    }, {
+      "name" : "snow",
+      "pwd" : "snowglobe",
+      "uid" : "00000f56"
+    }, {
+      "name" : "david516",
+      "pwd" : "password",
+      "uid" : "b0d00b0d"
+    } ]
   },
-  "pcs" : [
-    {
-	    "name" : "Basil",
-	    "scores" : [8, 6, 11, 13, 18, 16],
-	    "class" : 2,
-	    "race" : 0,
-	    "level" : 1,
-	    "feats" : [2],
-	    "skills" : [0],
-	    "spells" : [1],
-	    "uid" : "00000f56",
-	    "public" : 0
-	  },
-    {
-	    "name" : "Meatball",
-	    "scores" : [16, 18, 15, 12, 4, 6],
-	    "class" : 0,
-	    "race" : 2,
-	    "level" : 2,
-	    "feats" : [1],
-	    "skills" : [2],
-	    "spells" : [],
-	    "uid" : "b0d00b0d",
-	    "public" : 1
-	  },
-    {
-	    "name" : "Vladimir Tlatoani",
-	    "scores" : [13, 12, 17, 10, 4, 15],
-	    "class" : 0,
-	    "race" : 1,
-	    "level" : 1,
-	    "feats" : [],
-	    "skills" : [1],
-	    "spells" : [],
-	    "uid" : "00000f56",
-	    "public" : 1
-	  }
-  ],
+  "pc" : [ {
+    "class" : 2,
+    "feats" : [ 2 ],
+    "level" : 1,
+    "name" : "Basil",
+    "public" : 0,
+    "race" : 0,
+    "scores" : [ 8, 6, 11, 13, 18, 16 ],
+    "skills" : [ 0 ],
+    "spells" : [ 1 ],
+    "uid" : "00000f56"
+  }, {
+    "class" : 0,
+    "feats" : [ 1 ],
+    "level" : 2,
+    "name" : "Meatball",
+    "public" : 1,
+    "race" : 2,
+    "scores" : [ 16, 18, 15, 12, 4, 6 ],
+    "skills" : [ 2 ],
+    "uid" : "b0d00b0d"
+  }, {
+    "class" : 0,
+    "level" : 1,
+    "name" : "Vladimir Tlatoani",
+    "public" : 1,
+    "race" : 1,
+    "scores" : [ 13, 12, 17, 10, 4, 15 ],
+    "skills" : [ 1 ],
+    "uid" : "00000f56"
+  }, {
+    "class" : 0,
+    "level" : 1,
+    "name" : "Rafael",
+    "public" : 0,
+    "race" : 0,
+    "scores" : [ 10, 10, 10, 10, 10, 10 ],
+    "skills" : [ 0 ],
+    "uid" : "b0d00b0d"
+  }, {
+    "class" : 0,
+    "level" : 1,
+    "name" : "Rafael2",
+    "public" : 0,
+    "race" : 0,
+    "scores" : [ 10, 11, 10, 10, 10, 10 ],
+    "skills" : [ 0 ],
+    "uid" : "b0d00b0d"
+  } ],
   "rule" : {
-      "ability_score" : [
-  	  {
-  	    "name" : "CON"
-  	  },
-  	  {
-  	    "name" : "STR"
-  	  },
-  	  {
-  	    "name" : "DEX"
-  	  },
-  	  {
-  	    "name" : "WIS"
-  	  },
-  	  {
-  	    "name" : "INT"
-  	  },
-  	  {
-  	    "name" : "CHA"
-  	  }
-  	],
-  	"language" : [
-  	  {
-  	    "name" : "Common"
-  	  },
-  	  {
-  	    "name" : "Elven"
-  	  },
-  	  {
-  	    "name" : "Dwarven"
-  	  }
-  	],
-  	"skill" : [
-  	  {
-  	    "name" : "Acrobatics",
-  		  "long_desc" : "<COMING SOON>",
-  		  "short_desc" : "<COMING SOON>",
-  		  "armor_penalty" : 1,
-  		  "ability" : 2
-  	  },
-  	  {
-  	    "name" : "Appraise",
-  		  "long_desc" : "<COMING SOON>",
-  		  "short_desc" : "<COMING SOON>",
-  		  "armor_penalty" : 0,
-  		  "ability" : 4
-  	  },
-  	  {
-  	    "name" : "Bluff",
-  		  "long_desc" : "<COMING SOON>",
-  		  "short_desc" : "<COMING SOON>",
-  		  "armor_penalty" : 0,
-  		  "ability" : 5
-  	  },
-  	  {
-  	    "name" : "Climb",
-  		  "long_desc" : "<COMING SOON>",
-  		  "short_desc" : "<COMING SOON>",
-  		  "armor_penalty" : 1,
-  		  "ability" : 1
-  	  },
-  	  {
-  	    "name" : "Craft",
-  		  "long_desc" : "<COMING SOON>",
-  		  "short_desc" : "<COMING SOON>",
-  		  "armor_penalty" : 0,
-  		  "ability" : 4
-  	  }
-  	],
-  	"feats" : [
-  	  {
-  	    "name" : "Accomplished Sneak Attacker"
-  	  },
-  	  {
-  	    "name" : "Acrobatic"
-  	  },
-  	  {
-  	    "name" : "Cloud Step"
-  	  }
-  	],
-  	"racial_feats" : [
-  	  {
-  	    "name" : "Bonus Feat",
-  		  "desc" : "Select 1 extra feat at 1st level."
-  	  },
-  	  {
-  	    "name" : "Skilled",
-  		  "desc" : "Select 1 additional skill rank per level."
-      },
-  	  {
-  	    "name" : "Human Versatility",
-  		  "desc" : "Add +2 to your choice of ability score."
-      },
-  	  {
-  	    "name" : "Elven Immunities",
-  		  "desc" : "Immune to magic sleeps effects. Gain +2 to saving throws against enchantment spells and effects."
-      },
-  	  {
-  	    "name" : "Keen Senses",
-  		  "desc" : "+2 to Perception"
-      },
-  	  {
-  	    "name" : "Elven Magic",
-  		  "desc" : "+2 to overcome spell resistance. +2 to identify magic items."
-      },
-  	  {
-  	    "name" : "Weapon Familiarity (Elven)",
-  		  "desc" : "Proficient with longbows, longswords, rapiers, and shortbows. Treat elven weapons as martial weapons."
-      },
-  	  {
-  	    "name" : "Low-Light Vision",
-  		  "desc" : "See twice as far as humans in dim light."
-      },
-  	  {
-  	    "name" : "Defensive Training",
-  		  "desc" : "+4 to AC against giants."
-      },
-  	  {
-  	    "name" : "Hardy",
-  		  "desc" : "+2 on saving throws against poison or spells."
-      },
-  	  {
-  	    "name" : "Stability",
-  		  "desc" : "+4 to resististing tripping or a bull rush."
-      },
-  	  {
-  	    "name" : "Greed",
-  		  "desc" : "+2 to Appraise checks on nonmagical precious goods."
-      },
-  	  {
-  	    "name" : "Stonecunning",
-  		  "desc" : "+2 to Perception to notice unusual stonework, indicating traps or hidden doors. Recieve a check to notice such features when within 10 feet of them, even if not looking."
-      },
-  	  {
-  	    "name" : "Darkvision",
-  		  "desc" : "Can see perfectly in the dark up to 60 feet."
-      },
-  	  {
-  	    "name" : "Hatred",
-  		  "desc" : "+1 to attack rolls against orc or goblinoid creatures."
-      },
-  	  {
-  	    "name" : "Weapon Familiarity (Dwarven)",
-  		  "desc" : "Proficient with battleaxes, heavy picks, and warhammers. Treat dwarven weapons as martial weapons."
-      }
-  	],
-  	"class_feats" : [
-  	  {
-  	    "name" : "Bonus Feat"
-  	  },
-  	  {
-  	    "name" : "Nature Bond"
-  	  },
-  	  {
-  	    "name" : "Nature Sense"
-  	  },
-  	  {
-  	    "name" : "Orisons"
-  	  },
-  	  {
-  	    "name" : "Wild Empathy"
-  	  },
-  	  {
-  	    "name" : "Arcane Bond"
-  	  },
-  	  {
-  	    "name" : "Arcane School"
-  	  },
-  	  {
-  	    "name" : "Cantrips"
-  	  },
-  	  {
-  	    "name" : "Scribe Scroll"
-  	  }
-  	],
-  	"magic_schools" : [
-  	  {
-  	    "name" : "abjuration"
-  	  },
-  	  {
-  	    "name" : "conjuration"
-  	  },
-  	  {
-  	    "name" : "divination"
-  	  },
-  	  {
-  	    "name" : "enchantment"
-  	  },
-  	  {
-  	    "name" : "evocation"
-  	  },
-  	  {
-  	    "name" : "illusion"
-  	  },
-  	  {
-  	    "name" : "necromancy"
-  	  },
-  	  {
-  	    "name" : "transmutation"
-  	  }
-  	],
-  	"spell" : [
-  	  {
-  	    "name" : "Abeyance",
-  	    "school" : 0,
-  	    "time" : "1 minute"
-        },
-  	  {
-  	    "name" : "Abhorrent Blight",
-  	    "school" : 6,
-  	    "time" : "1 action"
-  	  },
-  	  {
-  	    "name" : "Ablative Barrier",
-  	    "school" : 1,
-  	    "time" : "1 action"
-  	  }
-  	],
-  	"race" : [
-  	  {
-  	    "name" : "Human",
-  	    "modifier" : [0, 0, 0, 0, 0, 0],
-  	    "size" : "Medium",
-  	    "speed" : 30,
-  	    "language" : [0],
-  	    "racial_feats" : [0, 1, 2]
-  	  },
-  	  {
-  	    "name" : "Elf",
-  	    "modifier" : [-2, 0, 2, 0, 2, 0],
-  	    "size" : "Medium",
-  	    "speed" : 30,
-  	    "language" : [0, 1],
-  	    "racial_feats" : [3, 4, 5, 6, 7]
-  	  },
-  	  {
-  	    "name" : "Dwarf",
-  	    "modifier" : [2, 0, 0, 2, 0, -2],
-  	    "size" : "Medium",
-  	    "speed" : 20,
-  	    "language" : [0, 2],
-  	    "racial_feats" : [8, 9, 10, 11, 12, 13, 14, 15]
-  	  }
-  	],
-    "class" : [
-  	  {
-  	    "name" : "Fighter",
-  		  "short_desc" : "Exceptional battle prowess and tactical skill.",
-  		  "long_desc" : "<COMING SOON>",
-  		  "hit_dice" : "d10",
-  		  "skill" : [3, 4],
-  		  "skill_rank_per_lev" : 2,
-  		  "spells" : [],
-  		  "level_bonus" :
-        [
-  		    {
-  		      "attack_bonus" : 1,
-  		      "fort_save" : 2,
-  			    "ref_save" : 0,
-  			    "will_save" : 0,
-  			    "special" : [0],
-  			    "spellcount" : []
-  		    }
-  		  ]
-  	  },
-  	  {
-  	    "name" : "Druid",
-  		  "short_desc" : "Nature boy.",
-  		  "long_desc" : "<COMING SOON>",
-  		  "hit_dice" : "d8",
-  		  "skill" : [3, 4],
-  		  "skill_rank_per_lev" : 4,
-  		  "spells" : [],
-  		  "level_bonus" :
-        [
-  		    {
-  		      "attack_bonus" : 0,
-  		      "fort_save" : 2,
-  			    "ref_save" : 0,
-  			    "will_save" : 2,
-  			    "special" : [1, 2, 3, 4],
-  			    "spellcount" : [3, 1]
-  		    }
-  		  ]
-  	  },
-  	  {
-  	    "name" : "Wizard",
-  		  "short_desc" : "Smart.",
-  		  "long_desc" : "<COMING SOON>",
-  		  "hit_dice" : "d6",
-  		  "skill" : [1, 4],
-  		  "skill_rank_per_lev" : 2,
-  		  "spells" : [1, 2],
-  		  "level_bonus" :
-        [
-  		    {
-  		      "attack_bonus" : 0,
-  		      "fort_save" : 0,
-  			    "ref_save" : 0,
-  			    "will_save" : 2,
-  			    "special" : [5, 6, 7, 8],
-  			    "spellcount" : [3, 1]
-  		    }
-  		  ]
-  	  }
-  	]
+    "ability_score" : [ {
+      "name" : "CON",
+	  "full_name" : "Constitution",
+	  "desc" : "How well one takes a hit, affects one's total hit points."
+    }, {
+      "name" : "STR",
+	  "full_name" : "Strength",
+	  "desc" : "Ability to swing a weapon or move large objects, as well as general endurance."
+    }, {
+      "name" : "DEX",
+	  "full_name" : "Dexterity",
+	  "desc" : "Ability to dodge, move quickly, and properly use some weapons."
+    }, {
+      "name" : "WIS",
+	  "full_name" : "Wisdom",
+	  "desc" : "Ability to perceive and understand one's surroundings. Often used to resist spells. Used by some to cast spells."
+    }, {
+      "name" : "INT",
+	  "full_name" : "Intelligence",
+	  "desc" : "Knowledge of the world, history, invention, and magic."
+    }, {
+      "name" : "CHA",
+	  "full_name" : "Charisma",
+	  "desc" : "Ability to handle people or other entities in a conversation. Used by some to cast spells."
+    } ],
+    "class" : [ {
+      "hit_dice" : "d10",
+      "level_bonus" : [ {
+        "attack_bonus" : 1,
+        "fort_save" : 2,
+        "ref_save" : 0,
+        "special" : [ 0 ],
+        "will_save" : 0
+      } ],
+      "long_desc" : "Fighters excel at combat—defeating their enemies, controlling the flow of battle, and surviving such sorties themselves. While their specific weapons and methods grant them a wide variety of tactics, few can match fighters for sheer battle prowess.",
+      "name" : "Fighter",
+      "short_desc" : "Exceptional battle prowess and tactical skill.",
+      "skill" : [ 3, 4 ],
+      "skill_rank_per_lev" : 2
+    }, {
+      "hit_dice" : "d8",
+      "level_bonus" : [ {
+        "attack_bonus" : 0,
+        "fort_save" : 2,
+        "ref_save" : 0,
+        "special" : [ 1, 2, 3, 4 ],
+        "spellcount" : [ 3, 1 ],
+        "will_save" : 2
+      } ],
+      "long_desc" : "While some druids might keep to the fringe of battle, allowing companions and summoned creatures to fight while they confound foes with the powers of nature, others transform into deadly beasts and savagely wade into combat. Druids worship personifications of elemental forces, natural powers, or nature itself. Typically this means devotion to a nature deity, though druids are just as likely to revere vague spirits, animalistic demigods, or even specific awe-inspiring natural wonders.",
+      "name" : "Druid",
+      "short_desc" : "Manipulate flora and fauna to their advantage.",
+      "skill" : [ 3, 4 ],
+      "skill_rank_per_lev" : 4
+    }, {
+      "hit_dice" : "d6",
+      "level_bonus" : [ {
+        "attack_bonus" : 0,
+        "fort_save" : 0,
+        "ref_save" : 0,
+        "special" : [ 5, 6, 7, 8 ],
+        "spellcount" : [ 3, 1 ],
+        "will_save" : 2
+      } ],
+      "long_desc" : "While universalist wizards might study to prepare themselves for any manner of danger, specialist wizards research schools of magic that make them exceptionally skilled within a specific focus. Yet no matter their specialty, all wizards are masters of the impossible and can aid their allies in overcoming any danger.",
+      "name" : "Wizard",
+      "short_desc" : "Use their intelligence to control the universe.",
+      "skill" : [ 1, 4 ],
+      "skill_rank_per_lev" : 2,
+      "spells" : [ 1, 2 ]
+    } ],
+    "class_feats" : [ {
+      "name" : "Bonus Feat"
+    }, {
+      "name" : "Nature Bond"
+    }, {
+      "name" : "Nature Sense"
+    }, {
+      "name" : "Orisons"
+    }, {
+      "name" : "Wild Empathy"
+    }, {
+      "name" : "Arcane Bond"
+    }, {
+      "name" : "Arcane School"
+    }, {
+      "name" : "Cantrips"
+    }, {
+      "name" : "Scribe Scroll"
+    } ],
+    "feats" : [ {
+      "name" : "Accomplished Sneak Attacker"
+    }, {
+      "name" : "Acrobatic"
+    }, {
+      "name" : "Cloud Step"
+    } ],
+    "language" : [ {
+      "name" : "Common"
+    }, {
+      "name" : "Elven"
+    }, {
+      "name" : "Dwarven"
+    } ],
+    "magic_schools" : [ {
+      "name" : "abjuration"
+    }, {
+      "name" : "conjuration"
+    }, {
+      "name" : "divination"
+    }, {
+      "name" : "enchantment"
+    }, {
+      "name" : "evocation"
+    }, {
+      "name" : "illusion"
+    }, {
+      "name" : "necromancy"
+    }, {
+      "name" : "transmutation"
+    } ],
+    "race" : [ {
+      "language" : [ 0 ],
+      "modifier" : [ 0, 0, 0, 0, 0, 0 ],
+      "name" : "Human",
+      "racial_feats" : [ 0, 1, 2 ],
+      "size" : "Medium",
+      "speed" : 30
+    }, {
+      "language" : [ 0, 1 ],
+      "modifier" : [ -2, 0, 2, 0, 2, 0 ],
+      "name" : "Elf",
+      "racial_feats" : [ 3, 4, 5, 6, 7 ],
+      "size" : "Medium",
+      "speed" : 30
+    }, {
+      "language" : [ 0, 2 ],
+      "modifier" : [ 2, 0, 0, 2, 0, -2 ],
+      "name" : "Dwarf",
+      "racial_feats" : [ 8, 9, 10, 11, 12, 13, 14, 15 ],
+      "size" : "Medium",
+      "speed" : 20
+    } ],
+    "racial_feats" : [ {
+      "desc" : "Select 1 extra feat at 1st level.",
+      "name" : "Bonus Feat"
+    }, {
+      "desc" : "Select 1 additional skill rank per level.",
+      "name" : "Skilled"
+    }, {
+      "desc" : "Add +2 to your choice of ability score.",
+      "name" : "Human Versatility"
+    }, {
+      "desc" : "Immune to magic sleeps effects. Gain +2 to saving throws against enchantment spells and effects.",
+      "name" : "Elven Immunities"
+    }, {
+      "desc" : "+2 to Perception",
+      "name" : "Keen Senses"
+    }, {
+      "desc" : "+2 to overcome spell resistance. +2 to identify magic items.",
+      "name" : "Elven Magic"
+    }, {
+      "desc" : "Proficient with longbows, longswords, rapiers, and shortbows. Treat elven weapons as martial weapons.",
+      "name" : "Weapon Familiarity (Elven)"
+    }, {
+      "desc" : "See twice as far as humans in dim light.",
+      "name" : "Low-Light Vision"
+    }, {
+      "desc" : "+4 to AC against giants.",
+      "name" : "Defensive Training"
+    }, {
+      "desc" : "+2 on saving throws against poison or spells.",
+      "name" : "Hardy"
+    }, {
+      "desc" : "+4 to resististing tripping or a bull rush.",
+      "name" : "Stability"
+    }, {
+      "desc" : "+2 to Appraise checks on nonmagical precious goods.",
+      "name" : "Greed"
+    }, {
+      "desc" : "+2 to Perception to notice unusual stonework, indicating traps or hidden doors. Recieve a check to notice such features when within 10 feet of them, even if not looking.",
+      "name" : "Stonecunning"
+    }, {
+      "desc" : "Can see perfectly in the dark up to 60 feet.",
+      "name" : "Darkvision"
+    }, {
+      "desc" : "+1 to attack rolls against orc or goblinoid creatures.",
+      "name" : "Hatred"
+    }, {
+      "desc" : "Proficient with battleaxes, heavy picks, and warhammers. Treat dwarven weapons as martial weapons.",
+      "name" : "Weapon Familiarity (Dwarven)"
+    } ],
+    "skill" : [ {
+      "ability" : 2,
+      "armor_penalty" : 1,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Acrobatics",
+      "short_desc" : "<COMING SOON>"
+    }, {
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Appraise",
+      "short_desc" : "<COMING SOON>"
+    }, {
+      "ability" : 5,
+      "armor_penalty" : 0,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Bluff",
+      "short_desc" : "<COMING SOON>"
+    }, {
+      "ability" : 1,
+      "armor_penalty" : 1,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Climb",
+      "short_desc" : "<COMING SOON>"
+    }, {
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Craft",
+      "short_desc" : "<COMING SOON>"
+    } ],
+    "spell" : [ 
+	{
+	  "name" : "Acid Arrow",
+	  "school" : 1,
+	  "level" : 2,
+	  "classes" : [2],
+	  "time" : "1 action",
+	  "components" : "VSM",
+	  "range" : "400 ft",
+	  "duration" : "1 round + 1 round per 3 levels",
+	  "desc" : "An arrow of acid springs from your hand and speeds to its target. You must succeed on a ranged touch attack to hit your target. The arrow deals 2d4 points of acid damage with no splash damage. For every three caster levels you possess, the acid, unless neutralized, lasts for another round (to a maximum of 6 additional rounds at 18th level), dealing another 2d4 points of damage in each round."
+	}, {
+	  "name" : "Acid Fog",
+	  "school" : 1,
+	  "level" : 6,
+	  "classes" : [2],
+	  "time" : "1 action",
+	  "components" : "VSM",
+	  "range" : "100 ft",
+	  "duration" : "1 round per level",
+	  "desc" : "Acid fog creates a billowing mass of misty vapors like the solid fog spell. In addition to slowing down creatures and obscuring sight, this spell's vapors are highly acidic. Each round on your turn, starting when you cast the spell, the fog deals 2d6 points of acid damage to each creature and object within it."
+	}, {
+	  "name" : "Aid",
+	  "school" : 3,
+	  "level" : 2,
+	  "classes" : [],
+	  "time" : "1 action",
+	  "components" : "VS",
+	  "range" : "touch",
+	  "duration" : "1 min/level",
+	  "desc" : "Aid grants the target a +1 morale bonus on attack rolls and saves against fear effects, plus temporary hit points equal to 1d8 + caster level (to a maximum of 1d8+10 temporary hit points at caster level 10th)."
+	},
+	{
+	  "name" : "Resistance",
+	  "school" : 0,
+	  "level" : 0,
+	  "classes" : [1, 2],
+	  "time" : "1 action",
+	  "components" : "VSM",
+	  "range" : "touch",
+	  "duration" : "1 minute",
+	  "desc" : "You imbue the subject with magical energy that protects it from harm, granting it a +1 resistance bonus on saves."
+	}
+	]
   }
 }
