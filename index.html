@@ -54,13 +54,22 @@
         <!-- Tab Content -->
 
         <!-- Character Tab -->
-        <div id="tabs-1">
-            <p>Character tab.</p>
+        <div id="tabs-1" class="tab">
+			<table id="pc_table" class="selection_bg">
+				<tr>
+					<th>Name</th>
+					<th>Class</th>
+					<th>Race</th>
+					<th>Level</th>
+					<th>Owner</th>
+					<th>Permissions</th>
+				</tr>
+			</table>
         </div>
 
         <!-- Classes Tab -->
-        <div id="tabs-2">
-            <div id="classes_bg">
+        <div id="tabs-2" class="tab">
+            <div id="classes_bg" class="selection_bg">
 
                 <!-- Sets up Titles: Name and Short Description -->
                 <div id="class_label" class="name_box"><p>Name of Class</p></div>
@@ -88,8 +97,8 @@
         </div>
 
         <!-- Races Tab -->
-        <div id="tabs-3">
-          <div id="races_bg">
+        <div id="tabs-3" class="tab">
+          <div id="races_bg" class="selection_bg">
               <!-- Sets up Titles: Name and Short Description -->
             <div id="race_label" class="name_box"><p>Name of Race</p></div>
             <div id="summary_label" class="desc_box"><p>Short Summary</p></div>
@@ -114,8 +123,8 @@
         </div>
 
         <!-- Spells Tab -->
-        <div id="tabs-4">
-            <div id="spells_bg">
+        <div id="tabs-4" class="tab">
+            <div id="spells_bg" class="selection_bg">
                 <!-- Hardcoded for now, probably want to make this dynamic -->
                 <p>Level 0 Spells</p>
 
@@ -143,7 +152,7 @@
         </div>
 
         <!-- Feats Tab -->
-        <div id="tabs-5">
+        <div id="tabs-5" class="tab">
           <div id="feats_bg">
               <div id="Feat_Chart">
                   <!-- Feat Chart Heading -->

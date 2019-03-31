@@ -42,6 +42,48 @@ function change_race()
   player_race = document.querySelector('input[name="Race_Selection"]:checked').value;
 console.log((player_race));
 }
+
+function user(uid) {
+	for(j = 0; j < db.login.user.length; j++) {
+		if(uid == db.login.user[j].uid)
+			return db.login.user[j];
+	}
+	return null;
+}
+
+// Characters
+var pctab = document.getElementById("pc_table");
+for(i = 0; i < db.pc.length; i++) {
+	var pcrow = document.createElement("tr");
+	
+	var nodename = document.createElement("td");
+	var nodelevel = document.createElement("td");
+	var noderace = document.createElement("td");
+	var nodeclass = document.createElement("td");
+	var nodeowner = document.createElement("td");
+	var nodeperm= document.createElement("td");
+	var nodebutton= document.createElement("td");
+	
+	nodename.innerHTML = db.pc[i].name;
+	nodelevel.innerHTML = db.pc[i].level;
+	noderace.innerHTML = db.rule.race[db.pc[i].race].name;
+	nodeclass.innerHTML = db.rule.class[db.pc[i].class].name;
+	nodeowner.innerHTML = user(db.pc[i].uid).name;
+	nodeperm.innerHTML = db.pc[i].public == 1 ? "Public" : "Private";
+	nodebutton.innerHTML = 
+	"<button type='button'>View</button><button type='button' disabled>Edit</button><button type='button' disabled>Delete</button>";
+	
+	
+	pcrow.appendChild(nodename);
+	pcrow.appendChild(nodeclass);
+	pcrow.appendChild(noderace);
+	pcrow.appendChild(nodelevel);
+	pcrow.appendChild(nodeowner);
+	pcrow.appendChild(nodeperm);
+	pcrow.appendChild(nodebutton);
+	pctab.appendChild(pcrow);
+}
+
 //Classes
 
 //Fighter

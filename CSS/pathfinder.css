@@ -7,11 +7,13 @@
 
 /* Basic bg Sam imported from a GUI I project */
 body{
-    background-image: linear-gradient(red, #831600);
+    #background-image: linear-gradient(red, #831600);
+    background-image: linear-gradient(black, #831600);
   	background-repeat: repeat-x;
-    background-color: #831600;
-    min-height: 2000px;
-    min-width: 800px;
+    #background-color: #831600;
+    #min-height: 2000px;
+    min-height: 100vh;
+    #min-width: 800px;
 }
 /*Customizes the tabs - an example Sam had from GUI I
 #tabs{
@@ -32,29 +34,38 @@ body{
 }
 */
 
+.tab {
+    min-height: 800px;
+}
+
 /* Set the individual bg colors of the tabs */
 #tabs-1{
-    background-color: yellow;
+    #background-color: yellow;
+    background-color: khaki;
 }
 #tabs-2{
-    background-color: #5355f4;
+    #background-color: #5355f4;
+    background-color: steelblue;
 }
 #tabs-3{
-    background-color: green;
+    #background-color: green;
+	background-color: darkseagreen;
 }
 #tabs-4{
-    background-color: red;
+    #background-color: red;
+	background-color: lightcoral;
 }
 #tabs-5{
-    background-color: orange;
-    min-height: 800px;
+    #background-color: orange;
+	background-color: #FFC680;
+    #min-height: 800px;
 }
 #Feat_Chart{
     background-color: white;
 }
 
 /*Sets the White bg color found in Classes and Races tabs*/
-#classes_bg, #races_bg
+.selection_bg
 {
     background-color: white;
 }
@@ -104,7 +115,9 @@ body{
     border-radius: 1px;
     min-height: 400px;
     min-width: 700px;
+    max-height: 800px;
     text-align: center;
+	overflow: scroll;
 }
 
 /* Styles the feat textboxes */
