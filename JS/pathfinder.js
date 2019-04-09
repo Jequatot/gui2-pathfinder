@@ -71,7 +71,7 @@ for(i = 0; i < db.pc.length; i++) {
 	nodeowner.innerHTML = user(db.pc[i].uid).name;
 	nodeperm.innerHTML = db.pc[i].public == 1 ? "Public" : "Private";
 	nodebutton.innerHTML =
-	"<button type='button' id = 'view_button'>View</button><button type='button' disabled>Edit</button><button type='button' disabled>Delete</button>";
+	"<button type='button' class =\"view_button\">View</button><button type='button' disabled>Edit</button><button type='button' disabled>Delete</button>";
 
 
 	pcrow.appendChild(nodename);
@@ -84,13 +84,15 @@ for(i = 0; i < db.pc.length; i++) {
 	pctab.appendChild(pcrow);
 }
 // view button to see modal to pop out
-  var btn = document.getElementById('view_button');
+  var btns = document.getElementsByClassName("view_button");
   var modal =  document.getElementById('modal_popout');
   var span = document.getElementsByClassName("close")[0];
 // button clicked
-  btn.onclick = function() {
+for(let i=0;i<btns.length;i++){
+  btns[i].onclick = function() {
   modal.style.display = "block";
   console.log("modal appears");
+  }
 }
 // (x) span to close
 span.onclick = function() {
