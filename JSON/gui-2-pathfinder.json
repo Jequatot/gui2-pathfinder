@@ -286,8 +286,50 @@
       "long_desc" : "<COMING SOON>",
       "name" : "Craft",
       "short_desc" : "<COMING SOON>"
-    } ],
-    "spell" : [ 
+    },{
+      "ability" : 5,
+      "armor_penalty" : 0,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Diplomacy",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 2,
+      "armor_penalty" : 1,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Disable Device",
+      "short_desc" : "<COMING SOON>"
+    } ,{
+      "ability" : 5,
+      "armor_penalty" : 0,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Disguise",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 2,
+      "armor_penalty" : 1,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Escape Artist",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 2,
+      "armor_penalty" : 1,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Fly",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 5,
+      "armor_penalty" : 0,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Handle Animal",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 3,
+      "armor_penalty" : 0,
+      "long_desc" : "<COMING SOON>",
+      "name" : "Heal",
+      "short_desc" : "<COMING SOON>"
+    }],
+    "spell" : [
 	{
 	  "name" : "Acid Arrow",
 	  "school" : 1,

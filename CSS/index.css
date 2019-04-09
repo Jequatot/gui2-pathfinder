@@ -1,0 +1,51 @@
+/*
+  Copyright (C) 2019 Jeff Quattrociocchi, Sam Pickell, Stanley Chan, Peter Louisne
+  UMass Lowell CS Students, COMP 4620 GUI II
+  March 23, 2019
+  GUI II Pathfinder Group 6, index.css
+*/
+
+/* Basic bg Sam imported from a GUI I project */
+body{
+    #background-image: linear-gradient(red, #831600);
+    background-image: linear-gradient(black, #831600);
+  	background-repeat: repeat-x;
+    #background-color: #831600;
+    #min-height: 2000px;
+    min-height: 100vh;
+    #min-width: 800px;
+}
+
+#login_div{
+    background-color: white;
+    margin-top: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
+    min-width: 400px;
+    min-height: 400px;
+}
+
+#title_text{
+    font-size: 48px;
+    margin-left: 5px;
+    margin-bottom: 60px;
+}
+
+#enter_username, #enter_password{
+    margin-left: 5px;
+    text-align: center;
+}
+
+#un_box, #pw_box{
+    margin-left: 3px;
+    text-align: center;
+}
+
+#sign_in_div{
+    text-align: center;
+}
+
+#sign_up_div > p{
+    text-align: center;
+    font-size: 12px;
+}

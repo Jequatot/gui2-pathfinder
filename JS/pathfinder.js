@@ -55,7 +55,7 @@ function user(uid) {
 var pctab = document.getElementById("pc_table");
 for(i = 0; i < db.pc.length; i++) {
 	var pcrow = document.createElement("tr");
-	
+
 	var nodename = document.createElement("td");
 	var nodelevel = document.createElement("td");
 	var noderace = document.createElement("td");
@@ -63,17 +63,17 @@ for(i = 0; i < db.pc.length; i++) {
 	var nodeowner = document.createElement("td");
 	var nodeperm= document.createElement("td");
 	var nodebutton= document.createElement("td");
-	
+
 	nodename.innerHTML = db.pc[i].name;
 	nodelevel.innerHTML = db.pc[i].level;
 	noderace.innerHTML = db.rule.race[db.pc[i].race].name;
 	nodeclass.innerHTML = db.rule.class[db.pc[i].class].name;
 	nodeowner.innerHTML = user(db.pc[i].uid).name;
 	nodeperm.innerHTML = db.pc[i].public == 1 ? "Public" : "Private";
-	nodebutton.innerHTML = 
-	"<button type='button'>View</button><button type='button' disabled>Edit</button><button type='button' disabled>Delete</button>";
-	
-	
+	nodebutton.innerHTML =
+	"<button type='button' id = 'view_button'>View</button><button type='button' disabled>Edit</button><button type='button' disabled>Delete</button>";
+
+
 	pcrow.appendChild(nodename);
 	pcrow.appendChild(nodeclass);
 	pcrow.appendChild(noderace);
@@ -83,7 +83,28 @@ for(i = 0; i < db.pc.length; i++) {
 	pcrow.appendChild(nodebutton);
 	pctab.appendChild(pcrow);
 }
+// view button to see modal to pop out
+  var btn = document.getElementById('view_button');
+  var modal =  document.getElementById('modal_popout');
+  var span = document.getElementsByClassName("close")[0];
+// button clicked
+  btn.onclick = function() {
+  modal.style.display = "block";
+  console.log("modal appears");
+}
+// (x) span to close
+span.onclick = function() {
+  modal.style.display = "none";
+  console.log("modal disappears");
+}
 
+//click out of modal closes it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    console.log("modal disappears");
+  }
+}
 //Classes
 
 //Fighter
