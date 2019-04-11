@@ -155,11 +155,17 @@
       "name" : "Scribe Scroll"
     } ],
     "feats" : [ {
-      "name" : "Accomplished Sneak Attacker"
+      "name" : "Accomplished Sneak Attacker",
+      "prerequisite": "<coming soon>",
+      "benefits": "<coming soon>"
     }, {
-      "name" : "Acrobatic"
+      "name" : "Acrobatic",
+      "prerequisite": "<coming soon>",
+      "benefits": "<coming soon>"
     }, {
-      "name" : "Cloud Step"
+      "name" : "Cloud Step",
+      "prerequisite": "<coming soon>",
+      "benefits": "<coming soon>"
     } ],
     "language" : [ {
       "name" : "Common"
@@ -259,74 +265,235 @@
     "skill" : [ {
       "ability" : 2,
       "armor_penalty" : 1,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You can keep your balance while traversing narrow or treacherous surfaces. You can also dive, flip, jump, and roll, avoiding attacks and confusing your opponents.",
       "name" : "Acrobatics",
       "short_desc" : "<COMING SOON>"
     }, {
       "ability" : 4,
       "armor_penalty" : 0,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You can evaluate the monetary value of an object.",
       "name" : "Appraise",
       "short_desc" : "<COMING SOON>"
     }, {
       "ability" : 5,
       "armor_penalty" : 0,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You know how to tell a lie.",
       "name" : "Bluff",
       "short_desc" : "<COMING SOON>"
     }, {
       "ability" : 1,
       "armor_penalty" : 1,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You are skilled at scaling vertical surfaces, from smooth city walls to rocky cliffs.",
       "name" : "Climb",
       "short_desc" : "<COMING SOON>"
     }, {
       "ability" : 4,
       "armor_penalty" : 0,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You are skilled in the creation of a specific group of items, such as armor or weapons. Like Knowledge, Perform, and Profession, Craft is actually a number of separate skills. You could have several Craft skills, each with its own ranks. The most common Craft skills are alchemy, armor, baskets, books, bows, calligraphy, carpentry, cloth, clothing, glass, jewelry, leather, locks, paintings, pottery, sculptures, ships, shoes, stonemasonry, traps, and weapons.
+      A Craft skill is specifically focused on creating something. If nothing is created by the endeavor, it probably falls under the heading of a Profession skill.",
       "name" : "Craft",
       "short_desc" : "<COMING SOON>"
     },{
       "ability" : 5,
       "armor_penalty" : 0,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You can use this skill to persuade others to agree with your arguments, to resolve differences, and to gather valuable information or rumors from people. This skill is also used to negotiate conflicts by using the proper etiquette and manners suitable to the problem.",
       "name" : "Diplomacy",
       "short_desc" : "<COMING SOON>"
     },{
       "ability" : 2,
       "armor_penalty" : 1,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You are skilled at disarming traps and opening locks. In addition, this skill lets you sabotage simple mechanical devices, such as catapults, wagon wheels, and doors.",
       "name" : "Disable Device",
       "short_desc" : "<COMING SOON>"
     } ,{
       "ability" : 5,
       "armor_penalty" : 0,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You are skilled at changing your appearance.",
       "name" : "Disguise",
       "short_desc" : "<COMING SOON>"
     },{
       "ability" : 2,
       "armor_penalty" : 1,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "Your training allows you to slip bonds and escape from grapples.",
       "name" : "Escape Artist",
       "short_desc" : "<COMING SOON>"
     },{
       "ability" : 2,
       "armor_penalty" : 1,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You are skilled at flying, either through the use of wings or magic, and you can perform daring or complex maneuvers while airborne. Note that this skill does not give you the ability to fly.",
       "name" : "Fly",
       "short_desc" : "<COMING SOON>"
     },{
       "ability" : 5,
       "armor_penalty" : 0,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "You are trained at working with animals, and can teach them tricks, get them to follow your simple commands, or even domesticate them.",
       "name" : "Handle Animal",
       "short_desc" : "<COMING SOON>"
     },{
       "ability" : 3,
       "armor_penalty" : 0,
-      "long_desc" : "<COMING SOON>",
+      "long_desc" : "The DC and effect depend on the task you attempt.",
       "name" : "Heal",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 5,
+      "armor_penalty" : 0,
+      "long_desc" : "You can use this skill to frighten your opponents or to get them to act in a way that benefits you. This skill includes verbal threats and displays of prowess.",
+      "name" : "Intimidate",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts); Although robots are constructs, Knowledge (arcana) cannot be used to identify robots or their abilities and weaknesses.
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. ",
+      "name" : "Knowledge (Arcana)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "Dungeoneering (aberrations, caverns, oozes, spelunking).
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties.",
+      "name" : "Knowledge (Dungeoneering)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "(buildings, aqueducts, bridges, fortifications); This is the most important skill with regard to technological subjects. Knowledge (engineering) can be used to identify a robot’s abilities and weaknesses. Knowledge (engineering) is also used to identify and understand unknown technological objects in a similar manner to how Spellcraft is used to identify the properties of a magic item. The DC to correctly identify and understand an unknown technological object is equal to the object’s Craft DC. An object with a Craft DC of 15 or less can be automatically identified and understood by someone trained in Knowledge (engineering) who also has the Technologist feat.
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. ",
+      "name" : "Knowledge (Engineering)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "(lands, terrain, climate, people); Used for astronomy.
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. ",
+      "name" : "Knowledge (Geography)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "(wars, colonies, migrations, founding of cities).
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties.",
+      "name" : "Knowledge (History)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : " (legends, personalities, inhabitants, laws, customs, traditions, humanoids)
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties.",
+      "name" : "Knowledge (Local)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "(animals, fey, monstrous humanoids, plants, seasons and cycles, weather, vermin)
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties.",
+      "name" : "Knowledge (Nature)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "(lineages, heraldry, personalities, royalty)
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties.",
+      "name" : "Knowledge (Nobility)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "(the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, planar magic)
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties.",
+      "name" : "Knowledge (Planes)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : " (gods and goddesses, mythic history, ecclesiastic tradition, holy symbols, undead)
+      You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties.",
+      "name" : "Knowledge (Religion)",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "You are skilled at working with language, in both its spoken and written forms. You can speak multiple languages, and can decipher nearly any tongue given enough time. Your skill in writing allows you to create and detect forgeries as well.",
+      "name" : "Linguistics",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 3,
+      "armor_penalty" : 0,
+      "long_desc" : "Your senses allow you to notice fine details and alert you to danger. Perception covers all five senses, including sight, hearing, touch, taste, and smell.",
+      "name" : "Perception",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 5,
+      "armor_penalty" : 0,
+      "long_desc" : "You are skilled at one form of entertainment, from singing to acting to playing an instrument. Like Craft, Knowledge, and Profession, Perform is actually a number of separate skills. You could have several Perform skills, each with its own ranks.
+Each of the nine categories of the Perform skill includes a variety of methods, instruments, or techniques, a small sample of which is provided for each category below.
+
+Act (comedy, drama, pantomime)
+Comedy (buffoonery, limericks, joke-telling)
+Dance (ballet, waltz, jig)
+Keyboard instruments (harpsichord, piano, pipe organ)
+Oratory (epic, ode, storytelling)
+Percussion instruments (bells, chimes, drums, gong)
+String instruments (fiddle, harp, lute, mandolin)
+Wind instruments (flute, pan pipes, recorder, trumpet)
+Sing (ballad, chant, melody)",
+      "name" : "Perform",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 3,
+      "armor_penalty" : 0,
+      "long_desc" : "
+You are skilled at a specific job. Like Craft, Knowledge, and Perform, Profession is actually a number of separate skills. You could have several Profession skills, each with its own ranks. While a Craft skill represents ability in creating an item, a Profession skill represents an aptitude in a vocation requiring a broader range of less specific knowledge.",
+      "name" : "Profession",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 2,
+      "armor_penalty" : 1,
+      "long_desc" : "You are skilled at riding mounts, usually a horse, but possibly something more exotic, like a griffon or pegasus. If you attempt to ride a creature that is ill suited as a mount, you take a –5 penalty on your Ride checks.",
+      "name" : "Ride",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 3,
+      "armor_penalty" : 0,
+      "long_desc" : "You are skilled at detecting falsehoods and true intentions.",
+      "name" : "Sense Motive",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 2,
+      "armor_penalty" : 1,
+      "long_desc" : "Your training allows you to pick pockets, draw hidden weapons, and take a variety of actions without being noticed.",
+      "name" : "Sleight of Hand",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 4,
+      "armor_penalty" : 0,
+      "long_desc" : "You are skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast.",
+      "name" : "Spellcraft",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 2,
+      "armor_penalty" : 1,
+      "long_desc" : "You are skilled at avoiding detection, allowing you to slip past foes or strike from an unseen position. This skill covers hiding and moving silently.",
+      "name" : "Stealth",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 3,
+      "armor_penalty" : 0,
+      "long_desc" : "You are skilled at surviving in the wild and at navigating in the wilderness. You also excel at following trails and tracks left by others.",
+      "name" : "Survival",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 1,
+      "armor_penalty" : 1,
+      "long_desc" : "You know how to swim and can do so even in stormy water.",
+      "name" : "Swim",
+      "short_desc" : "<COMING SOON>"
+    },{
+      "ability" : 5,
+      "armor_penalty" : 0,
+      "long_desc" : "You are skilled at activating magic items, even if you are not otherwise trained in their use.",
+      "name" : "Use Magic Device",
       "short_desc" : "<COMING SOON>"
     }],
     "spell" : [

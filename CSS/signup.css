@@ -2,7 +2,7 @@
   Copyright (C) 2019 Jeff Quattrociocchi, Sam Pickell, Stanley Chan, Peter Louisne
   UMass Lowell CS Students, COMP 4620 GUI II
   March 23, 2019
-  GUI II Pathfinder Group 6, index.css
+  GUI II Pathfinder Group 6, signup.css
 */
 
 /* Basic bg Sam imported from a GUI I project */
@@ -17,7 +17,7 @@ body{
 }
 
 /* Styles the white box */
-#login_div{
+#signup_div{
     background-color: white;
     margin-top: 100px;
     margin-left: 30%;
@@ -35,7 +35,7 @@ body{
 }
 
 /* Styles the box within the box (un entry, pw, sign up) */
-#login_box{
+#signup_box{
     /*border-style: solid;*/
     margin-left: 25%;
     margin-right: 25%;
@@ -53,23 +53,23 @@ body{
     text-align: left;
 }
 
-/* Styles sign in button */
-#sign_in{
+/* Styles sign up button */
+#sign_up{
     margin-top: 15px;
 }
 
 /* Styles the button's container */
-#sign_in_div{
+#sign_up_button_div{
     text-align: center;
 }
 
-/* Styles the sign up text */
-#sign_up_div > p{
+/* Styles the sign in text */
+#sign_in_div > p{
     text-align: center;
     font-size: 12px;
 }
 
-/* Styles the sign up link */
-#sign_up_div > p > a{
+/* Styles the sign in link */
+#sign_in_div > p > a{
     text-decoration: none;
 }
