@@ -11,6 +11,59 @@ $(function(){
     $("#tabs").tabs();
 });
 
+//populate the class chart
+function add_to_class_chart() {
+	var cltab = document.getElementById("class_table");
+	for(i = 0; i < db.rule.class.length; i++) {
+		var clrow = document.createElement("tr");
+
+		var nodes = [4];
+		
+		for(j = 0; j < 4; j++){
+			nodes[j] = document.createElement("td");
+		}
+		classname = db.rule.class[i].name;
+		nodes[0].innerHTML =
+		"<input type='radio' id='Class_" + classname + "_Input' name='Class_Selection' value='" + classname + "' onclick='change_class()'>";
+		nodes[1].innerHTML = classname;
+		nodes[2].innerHTML = db.rule.class[i].short_desc;
+		nodes[3].innerHTML =
+		"<button type='button' class =\"view_button\">Details</button>";
+
+		
+		for(j = 0; j < 4; j++){
+			clrow.appendChild(nodes[j])
+		}
+		cltab.appendChild(clrow);
+	}
+}
+//populate the race chart
+function add_to_race_chart() {
+	var ratab = document.getElementById("race_table");
+	for(i = 0; i < db.rule.race.length; i++) {
+		var rarow = document.createElement("tr");
+
+		var nodes = [4];
+		
+		for(j = 0; j < 4; j++){
+			nodes[j] = document.createElement("td");
+		}
+		racename = db.rule.race[i].name;
+		nodes[0].innerHTML =
+		"<input type='radio' id='Race_" + racename + "_Input' name='Race_Selection' value='" + racename + "' onclick='change_race()'>";
+		nodes[1].innerHTML = racename;
+		nodes[2].innerHTML = db.rule.race[i].short_desc;
+		nodes[3].innerHTML =
+		"<button type='button' class=\"view_button\">Details</button>";
+
+		
+		for(j = 0; j < 4; j++){
+			rarow.appendChild(nodes[j])
+		}
+		ratab.appendChild(rarow);
+	}
+}
+
 //Populate Feat Chart
 function add_to_feat_chart()
 {
@@ -83,6 +136,11 @@ for(i = 0; i < db.pc.length; i++) {
 	pcrow.appendChild(nodebutton);
 	pctab.appendChild(pcrow);
 }
+
+// add player classes
+add_to_class_chart();
+add_to_race_chart();
+
 // view button to see modal to pop out
   var btns = document.getElementsByClassName("view_button");
   var modal =  document.getElementById('modal_popout');
@@ -109,6 +167,7 @@ window.onclick = function(event) {
 }
 //Classes
 
+/*
 //Fighter
 var myclass = db.rule.class[0];
 var myname = document.getElementById("Class_Fighter");
@@ -132,11 +191,11 @@ myname.textContent = myclass.name;
 
 myname = document.getElementById("Wizard_Desc");
 myname.textContent = myclass.short_desc;
-
+*/
 
 
 //Races
-
+/*
 //Human
 var myrace = db.rule.race[0];
 var name_of_race = document.getElementById("Race_Human");
@@ -160,7 +219,7 @@ name_of_race.textContent = myrace.name;
 
 name_of_race = document.getElementById("Dwarf_Desc");
 name_of_race.textContent = myrace.size; //Should be a description, using size for now
-
+*/
 
 //Spells (Hardcoded for now, probably want to make this dynamic)
 

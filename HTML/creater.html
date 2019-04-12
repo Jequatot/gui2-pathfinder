@@ -85,11 +85,23 @@
             <div id="classes_bg" class="selection_bg">
 
                 <!-- Sets up Titles: Name and Short Description -->
-                <div id="class_label" class="name_box"><p>Name of Class</p></div>
-                <div id="summary_label" class="desc_box"><p>Short Summary</p></div>
+				<h1>Choose a Class</h1>
+				<div><span>How do you conduct yourself in a conversation, or in a fight?<br/> From where do you draw your power?<br/> A class describes your character in broad strokes. Whether you have the stealth of a rogue, the cunning of a bard, or the discipline of a monk.</span></div>
+                <!--<div id="class_label" class="name_box"><p>Name of Class</p></div>
+                <div id="summary_label" class="desc_box"><p>Short Summary</p></div>-->
                 <hr></hr>
-
+				
+				<table id="class_table" class="selection_bg">
+					<tr>
+						<th></th>
+						<th>Name</th>
+						<th>Description</th>
+						<th></th>
+					</tr>
+				</table>
+				
                 <!-- Sets up Fighter Button, Name, and Short Description -->
+				<!--
                 <input type="radio" id="Class_Figher_Input" name="Class_Selection" value="Fighter" onclick="change_class()">
                 <div id="Class_Fighter" class="name_box"></div>
                 <div id="Fighter_Desc" class="desc_box"></div>
@@ -97,6 +109,7 @@
                 <br></br>
 
                 <!-- Sets up Druid Button, Name, and Short Description -->
+				<!--
                 <input type="radio" id="Class_Druid_Input" name="Class_Selection" value="Druid" onclick="change_class()">
                 <div id="Class_Druid" class="name_box"></div>
                 <div id="Druid_Desc" class="desc_box"></div>
@@ -104,40 +117,56 @@
                 <br></br>
 
                 <!-- Sets up Wizard Button, Name, and Short Description -->
+				<!--
                 <input type="radio" id="Class_Wizard_Input" name="Class_Selection" value="Wizard" onclick="change_class()">
                 <div id="Class_Wizard" class="name_box"></div>
                 <div id="Wizard_Desc" class="desc_box"></div>
                 <button type='button' class ="view_button">More details</button>
                 <br></br>
+				-->
             </div>
         </div>
 
         <!-- Races Tab -->
         <div id="tabs-3" class="tab">
           <div id="races_bg" class="selection_bg">
+			<h1>Choose a Race</h1>
+			<div><span>What is your species?<br/>Each race has their own unique abilities, magical or otherwise. Your character will also have some knowledge of the culture, history, and languages of their culture.<br/></span></div>
               <!-- Sets up Titles: Name and Short Description -->
-            <div id="race_label" class="name_box"><p>Name of Race</p></div>
-            <div id="summary_label" class="desc_box"><p>Short Summary</p></div>
+            <!--div id="race_label" class="name_box"><p>Name of Race</p></div>
+            <div id="summary_label" class="desc_box"><p>Short Summary</p></div-->
             <hr></hr>
+			<table id="race_table" class="selection_bg">
+				<tr>
+					<th></th>
+					<th>Name</th>
+					<th>Description</th>
+					<th></th>
+				</tr>
+			</table>
+			<!--
                 <!-- Sets up Human Button, Name, and Short Description -->
+				<!--
               <input type="radio" id="Race_Human_Input" name="Race_Selection" value ="Human"onclick="change_race()">
               <div id="Race_Human" class="name_box"></div>
               <div id="Human_Desc" class="desc_box"></div>
               <button type='button' class ="view_button">More details</button>
               <br></br>
                 <!-- Sets up Elf Button, Name, and Short Description -->
+				<!--
               <input type="radio" id="Race_Elf_Input" name="Race_Selection"value ="Elf"onclick="change_race()">
               <div id="Race_Elf" class="name_box"></div>
               <div id="Elf_Desc" class="desc_box"></div>
               <button type='button' class ="view_button">More details</button>
               <br></br>
                 <!-- Sets up Dwarf Button, Name, and Short Description -->
+				<!--
               <input type="radio" id="Race_Dwarf_Input" name="Race_Selection" value ="Dwarf"onclick="change_race()">
               <div id="Race_Dwarf" class="name_box"></div>
               <div id="Dwarf_Desc" class="desc_box"></div>
               <button type='button' class ="view_button">More details</button>
               <br></br>
-
+				-->
           </div>
         </div>
 
