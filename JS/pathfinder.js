@@ -245,3 +245,5 @@ name_of_spell.textContent = myspell.name;
 
 name_of_spell = document.getElementById("Spell2_List3");
 name_of_spell.textContent = myspell.name;
+
+document.getElementById("welcome").innerHTML = "Welcome, " + get_username(sessionStorage.getItem("uid"));

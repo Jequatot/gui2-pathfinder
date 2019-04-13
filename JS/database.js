@@ -50,8 +50,7 @@ function verify_user(name, pwd) {
 
 function push_user(_name, _pwd) {
 	for(i = 0; i < db.login.user.length; i++) {
-		if(db.login.user[i].name == _name
-			&& db.login.user[i].pwd == _pwd) {
+		if(db.login.user[i].name == _name) {
 				return "ALREADY EXISTS";
 		}
 	}
@@ -61,8 +60,8 @@ function push_user(_name, _pwd) {
 	var _uid;
 	do {
 		_uid = "";
-for(i = 0; i < 8; i++) {
-_uid += String.fromCharCode(48 + Math.floor(Math.random()*74))
+	for(i = 0; i < 8; i++) {
+		_uid += String.fromCharCode(48 + Math.floor(Math.random()*74))
 		}
 	} while(db.login.user.includes(_uid))
 
@@ -71,4 +70,14 @@ _uid += String.fromCharCode(48 + Math.floor(Math.random()*74))
 		pwd: _pwd,
 		uid: _uid
 	});
+	return _uid;
+}
+
+function get_username(_uid) {
+	for(i = 0; i < db.login.user.length; i++) {
+		if(db.login.user[i].uid == _uid) {
+			return db.login.user[i].name;
+		}
+	}
+	return "NOT FOUND";
 }

@@ -5,7 +5,7 @@
   GUI II Pathfinder Group 6, index page
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
 
     <!-- Links to the index CSS -->
@@ -28,6 +28,9 @@
 
     <!-- Our database JS -->
     <script src="JS/database.js"></script>
+	
+    <!-- Login JS -->
+    <script src="JS/signup.js"></script>
 
     <!-- External GUI II pathfinder firebase json -->
 	<script src="https://gui-2-pathfinder.firebaseio.com/.json?callback=db_load"></script>
@@ -60,14 +63,16 @@
 
               <!-- Sign In button -->
               <div id="sign_in_div">
-                  <button id="sign_in" type="submit">Sign In</button>
+                  <button id="sign_in" type="submit" onclick="verify_login()">Sign In</button>
+              </div>
+			  
+              <div id="error" style="color:red">
               </div>
 
               <!-- Sign Up -->
               <div id="sign_up_div">
-                  <p>Need to create an account? <a href="HTML/signup.html">Sign up</a> here!</p>
+                  <p>Need an account? <a href="HTML/signup.html">Create one</a> here!</p>
               </div>
-
           </div>
 
       </div>
