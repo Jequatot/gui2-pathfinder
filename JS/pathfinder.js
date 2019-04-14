@@ -28,7 +28,7 @@ function add_to_class_chart() {
 		nodes[1].innerHTML = classname;
 		nodes[2].innerHTML = db.rule.class[i].short_desc;
 		nodes[3].innerHTML =
-		"<button type='button' class =\"view_button\">Details</button>";
+		"<button type='button' class =\"view_button\" id=\"vb_class_" + classname + "\">Details</button>";
 
 		
 		for(j = 0; j < 4; j++){
@@ -54,7 +54,7 @@ function add_to_race_chart() {
 		nodes[1].innerHTML = racename;
 		nodes[2].innerHTML = db.rule.race[i].short_desc;
 		nodes[3].innerHTML =
-		"<button type='button' class=\"view_button\">Details</button>";
+		"<button type='button' class=\"view_button\" id=\"vb_race_" + racename + "\">Details</button>";
 
 		
 		for(j = 0; j < 4; j++){
@@ -124,7 +124,7 @@ for(i = 0; i < db.pc.length; i++) {
 	nodeowner.innerHTML = user(db.pc[i].uid).name;
 	nodeperm.innerHTML = db.pc[i].public == 1 ? "Public" : "Private";
 	nodebutton.innerHTML =
-	"<button type='button' class =\"view_button\">View</button><button type='button' disabled>Edit</button><button type='button' disabled>Delete</button>";
+	"<button type='button' class =\"view_button\" id=\"vb_" + db.pc[i].uid + "_" + db.pc[i].name + "\">View</button><button type='button' disabled>Edit</button><button type='button' disabled>Delete</button>";
 
 
 	pcrow.appendChild(nodename);
@@ -144,25 +144,47 @@ add_to_race_chart();
 // view button to see modal to pop out
   var btns = document.getElementsByClassName("view_button");
   var modal =  document.getElementById('modal_popout');
+  var modal_title =  document.getElementById('title_portion');
+  var modal_body =  document.getElementById('info_body');
   var span = document.getElementsByClassName("close")[0];
 // button clicked
 for(let i=0;i<btns.length;i++){
-  btns[i].onclick = function() {
-  modal.style.display = "block";
-  console.log("modal appears");
-  }
+	btns[i].onclick = function() {
+		vbid = btns[i].id.split("_");
+		modal.style.display = "block";
+		
+		if(vbid[1] == "class") {
+			selection = get_class(vbid[2]);
+			modal_title.innerHTML = selection.name;
+			modal_body.innerHTML = "<p>" + selection.name + "<br/>" + selection.long_desc + "</p>";
+			
+		} else if(vbid[1] == "race") {
+			selection = get_race(vbid[2]);
+			modal_title.innerHTML = selection.name;
+			modal_body.innerHTML = "<p>" + selection.name + "<br/>" + selection.short_desc + "</p>";
+			
+		} else if(vbid[1] == "spell") {
+			
+		} else { // clicked on a pc
+			selection = get_pc(vbid[1], vbid[2]);
+			modal_title.innerHTML = selection.name;
+			modal_body.innerHTML = "<p>" + selection.name + "<br/>" + db.rule.class[selection.class].name + "</p>";
+			
+		} 
+		//console.log("modal appears");
+	}
 }
 // (x) span to close
 span.onclick = function() {
   modal.style.display = "none";
-  console.log("modal disappears");
+  //console.log("modal disappears");
 }
 
 //click out of modal closes it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    console.log("modal disappears");
+    //console.log("modal disappears");
   }
 }
 //Classes
@@ -246,4 +268,8 @@ name_of_spell.textContent = myspell.name;
 name_of_spell = document.getElementById("Spell2_List3");
 name_of_spell.textContent = myspell.name;
 
-document.getElementById("welcome").innerHTML = "Welcome, " + get_username(sessionStorage.getItem("uid"));
+un = get_username(sessionStorage.getItem("uid"));
+if(un == "NOT FOUND")
+	document.getElementById("welcome").innerHTML = '<div> <p><span id="welcome">You are not logged in.</span> &nbsp ( <a style="color:blue" href = "../index.html">Sign In</a> )</p></div>';
+else
+	document.getElementById("welcome").innerHTML = '<div> <p><span id="welcome">Welcome ' + uid + '</span> &nbsp ( <a style="color:blue" href = "../index.html">Sign Out</a> )</p></div>';

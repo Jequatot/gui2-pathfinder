@@ -81,3 +81,33 @@ function get_username(_uid) {
 	}
 	return "NOT FOUND";
 }
+
+function get_class(_name) {
+	var arr = db.rule.class;
+	for(i = 0; i < arr.length; i++) {
+		if(arr[i].name == _name) {
+			return arr[i];
+		}
+	}
+	return "NOT FOUND";
+}
+
+function get_race(_name) {
+	var arr = db.rule.race;
+	for(i = 0; i < arr.length; i++) {
+		if(arr[i].name == _name) {
+			return arr[i];
+		}
+	}
+	return "NOT FOUND";
+}
+
+function get_pc(_uid, _name) {
+	var arr = db.pc;
+	for(i = 0; i < arr.length; i++) {
+		if(arr[i].name == _name && arr[i].uid == _uid) {
+			return arr[i];
+		}
+	}
+	return "NOT FOUND";
+}
