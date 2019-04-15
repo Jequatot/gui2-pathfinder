@@ -24,7 +24,7 @@ function add_to_class_chart() {
 		}
 		classname = db.rule.class[i].name;
 		nodes[0].innerHTML =
-		"<input type='radio' id='Class_" + classname + "_Input' name='Class_Selection' value='" + classname + "' onclick='change_class()'>";
+		"<input type='radio' id='Class_" + classname + "_Input' name='Class_Selection' value='" + i + "' onclick='change_class()'>";
 		nodes[1].innerHTML = classname;
 		nodes[2].innerHTML = db.rule.class[i].short_desc;
 		nodes[3].innerHTML =
@@ -50,7 +50,7 @@ function add_to_race_chart() {
 		}
 		racename = db.rule.race[i].name;
 		nodes[0].innerHTML =
-		"<input type='radio' id='Race_" + racename + "_Input' name='Race_Selection' value='" + racename + "' onclick='change_race()'>";
+		"<input type='radio' id='Race_" + racename + "_Input' name='Race_Selection' value='" + i + "' onclick='change_race()'>";
 		nodes[1].innerHTML = racename;
 		nodes[2].innerHTML = db.rule.race[i].short_desc;
 		nodes[3].innerHTML =
@@ -82,18 +82,6 @@ function add_to_feat_chart()
   $("#Feat_Chart").append(name_entry+prereq_entry+benefit_entry).value;
 }
 
-//changes class when clicked
-function change_class()
-{
-    player_class = document.querySelector('input[name="Class_Selection"]:checked').value;
-  console.log((player_class));
-}
-//change race
-function change_race()
-{
-  player_race = document.querySelector('input[name="Race_Selection"]:checked').value;
-console.log((player_race));
-}
 
 function user(uid) {
 	for(j = 0; j < db.login.user.length; j++) {
@@ -168,22 +156,39 @@ for(let i=0;i<btns.length;i++){
 			selection = get_pc(vbid[1], vbid[2]);
 			modal_title.innerHTML = selection.name;
 			modal_body.innerHTML = "<p>"
-      + "<span id=\"stat_label\"> Name: </div>" + selection.name + "<br/>"
-      + "<span id=\"stat_label\"> Class: </div>" + db.rule.class[selection.class].name+ "<br/>"
-      + "<span id=\"stat_label\"> Race: </div>" + db.rule.race[selection.race].name+ "<br/>"
-      + "<span id=\"stat_label\"> Level: </div>" + selection.level + "<br/>"
-      + "<span id=\"stat_label\"> CON: </div>" + selection.scores[0] + "<br/>"
-      + "<span id=\"stat_label\"> STR: </div>" + selection.scores[1] + "<br/>"
-      + "<span id=\"stat_label\"> DEX: </div>" + selection.scores[2] + "<br/>"
-      + "<span id=\"stat_label\"> WIS: </div>" + selection.scores[3] + "<br/>"
-      + "<span id=\"stat_label\"> INT: </div>" + selection.scores[4] + "<br/>"
-      + "<span id=\"stat_label\"> CHA: </div>" + selection.scores[5] + "<br/>";
+      + "<span class=\"stat_label\"> Name: </div>" + selection.name + "<br/>"
+      + "<span class=\"stat_label\"> Class: </div>" + db.rule.class[selection.class].name+ "<br/>"
+      + "<span class=\"stat_label\"> Race: </div>" + db.rule.race[selection.race].name+ "<br/>"
+      + "<span class=\"stat_label\"> Level: </div>" + selection.level + "<br/>"
+      + "<span class=\"stat_label\"> CON: </div>" + selection.scores[0] + "<br/>"
+      + "<span class=\"stat_label\"> STR: </div>" + selection.scores[1] + "<br/>"
+      + "<span class=\"stat_label\"> DEX: </div>" + selection.scores[2] + "<br/>"
+      + "<span class=\"stat_label\"> WIS: </div>" + selection.scores[3] + "<br/>"
+      + "<span class=\"stat_label\"> INT: </div>" + selection.scores[4] + "<br/>"
+      + "<span class=\"stat_label\"> CHA: </div>" + selection.scores[5] + "<br/>";
+
 
       //only doing skills for now, maybe do the same for spells and etc
-       modal_body.innerHTML +=  "<div id=\"stat_label\"> Skills </div>";
+      modal_body.innerHTML +=  "<div class=\"stat_label\"> Skills </div>";
       for(let i=0;i<selection.skills.length;i++){
-      modal_body.innerHTML += db.rule.skill[selection.skills[i]].name + "<br/>";
+        modal_body.innerHTML += db.rule.skill[selection.skills[i]].name + "<br/>";
       }
+      modal_body.innerHTML +=  "<br/>";
+      // currently if there are no spells it will be empty with Spells label only
+      // probably a good idea to make this not show if there are no spells available
+      //if()
+      modal_body.innerHTML +=  "<div class=\"stat_label\"> Spells </div>";
+      for(let i=0;i<selection.spells.length;i++){
+        modal_body.innerHTML += db.rule.spell[selection.spell[i]].name + "<br/>";
+      }
+      modal_body.innerHTML +=  "<br/>";
+       //need to know specifically which feats to asign and output and what to do when there are none
+       // if()
+      modal_body.innerHTML +=  "<div class=\"stat_label\"> Feats </div>";
+      for(let i=0;i<selection.feats.length;i++){
+        modal_body.innerHTML += db.rule.class_feats[selection.feats[i]].name + "<br/>";
+      }
+
       modal_body.innerHTML +=  "</p>";
 		}
 		//console.log("modal appears");
@@ -202,6 +207,50 @@ window.onclick = function(event) {
     //console.log("modal disappears");
   }
 }
+
+//Temporary Current Character stats
+
+var current_character = {
+  class: 0,
+  feats: 0,
+  level: 0,
+  name: 0,
+  puiblic: 0,
+  race: 0,
+  scores: 0,
+  skills: 0,
+  uid: 0
+};
+//changes class when clicked
+function change_class(){
+  current_character.class = document.querySelector('input[name="Class_Selection"]:checked').value;
+  console.log((current_character.class));
+}
+//change race
+function change_race(){
+  current_character.race = document.querySelector('input[name="Race_Selection"]:checked').value;
+  console.log((current_character.race));
+}
+function character_create(){
+  current_character.name = document.getElementById('Character_name').value;
+  current_character.level = document.getElementById('level_textbox').value;
+  var stat = new Array;
+  stat[0] = document.getElementById('con_textbox').value;
+  stat[1] = document.getElementById('str_textbox').value;
+  stat[2] = document.getElementById('dex_textbox').value;
+  stat[3] = document.getElementById('wis_textbox').value;
+  stat[4] = document.getElementById('int_textbox').value;
+//  stat[5] = document.getElementById('cha_textbox').value;
+
+  current_character.scores = stat;
+  console.log((current_character.name));
+  console.log((current_character.level));
+  console.log((current_character.scores));
+  console.log((current_character));
+}
+
+
+
 //Classes
 
 /*

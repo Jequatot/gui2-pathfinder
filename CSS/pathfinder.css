@@ -60,6 +60,11 @@ body{
 	background-color: #FFC680;
     #min-height: 800px;
 }
+#tabs-6{
+    #background-color: blue;
+	background-color:#9966ff;
+    #min-height: 800px;
+}
 #Feat_Chart{
     background-color: white;
 }
@@ -68,6 +73,10 @@ body{
 .selection_bg
 {
     background-color: white;
+}
+#stats_bg
+{
+  background-color: white;
 }
 
 /* Separate the Names from the Short Desc. in Class Tab */
