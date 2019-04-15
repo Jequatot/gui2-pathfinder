@@ -215,10 +215,11 @@ var current_character = {
   feats: 0,
   level: 0,
   name: 0,
-  puiblic: 0,
+  public: 0,
   race: 0,
   scores: 0,
   skills: 0,
+  spell: 0,
   uid: 0
 };
 //changes class when clicked
