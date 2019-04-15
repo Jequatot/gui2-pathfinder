@@ -18,7 +18,7 @@ function add_to_class_chart() {
 		var clrow = document.createElement("tr");
 
 		var nodes = [4];
-		
+
 		for(j = 0; j < 4; j++){
 			nodes[j] = document.createElement("td");
 		}
@@ -30,7 +30,7 @@ function add_to_class_chart() {
 		nodes[3].innerHTML =
 		"<button type='button' class =\"view_button\" id=\"vb_class_" + classname + "\">Details</button>";
 
-		
+
 		for(j = 0; j < 4; j++){
 			clrow.appendChild(nodes[j])
 		}
@@ -44,7 +44,7 @@ function add_to_race_chart() {
 		var rarow = document.createElement("tr");
 
 		var nodes = [4];
-		
+
 		for(j = 0; j < 4; j++){
 			nodes[j] = document.createElement("td");
 		}
@@ -56,7 +56,7 @@ function add_to_race_chart() {
 		nodes[3].innerHTML =
 		"<button type='button' class=\"view_button\" id=\"vb_race_" + racename + "\">Details</button>";
 
-		
+
 		for(j = 0; j < 4; j++){
 			rarow.appendChild(nodes[j])
 		}
@@ -83,7 +83,6 @@ function add_to_feat_chart()
 }
 
 //changes class when clicked
-// for some reason the first selection's value says on
 function change_class()
 {
     player_class = document.querySelector('input[name="Class_Selection"]:checked').value;
@@ -152,25 +151,41 @@ for(let i=0;i<btns.length;i++){
 	btns[i].onclick = function() {
 		vbid = btns[i].id.split("_");
 		modal.style.display = "block";
-		
+
 		if(vbid[1] == "class") {
 			selection = get_class(vbid[2]);
 			modal_title.innerHTML = selection.name;
 			modal_body.innerHTML = "<p>" + selection.name + "<br/>" + selection.long_desc + "</p>";
-			
+
 		} else if(vbid[1] == "race") {
 			selection = get_race(vbid[2]);
 			modal_title.innerHTML = selection.name;
 			modal_body.innerHTML = "<p>" + selection.name + "<br/>" + selection.short_desc + "</p>";
-			
+
 		} else if(vbid[1] == "spell") {
-			
+
 		} else { // clicked on a pc
 			selection = get_pc(vbid[1], vbid[2]);
 			modal_title.innerHTML = selection.name;
-			modal_body.innerHTML = "<p>" + selection.name + "<br/>" + db.rule.class[selection.class].name + "</p>";
-			
-		} 
+			modal_body.innerHTML = "<p>"
+      + "<span id=\"stat_label\"> Name: </div>" + selection.name + "<br/>"
+      + "<span id=\"stat_label\"> Class: </div>" + db.rule.class[selection.class].name+ "<br/>"
+      + "<span id=\"stat_label\"> Race: </div>" + db.rule.race[selection.race].name+ "<br/>"
+      + "<span id=\"stat_label\"> Level: </div>" + selection.level + "<br/>"
+      + "<span id=\"stat_label\"> CON: </div>" + selection.scores[0] + "<br/>"
+      + "<span id=\"stat_label\"> STR: </div>" + selection.scores[1] + "<br/>"
+      + "<span id=\"stat_label\"> DEX: </div>" + selection.scores[2] + "<br/>"
+      + "<span id=\"stat_label\"> WIS: </div>" + selection.scores[3] + "<br/>"
+      + "<span id=\"stat_label\"> INT: </div>" + selection.scores[4] + "<br/>"
+      + "<span id=\"stat_label\"> CHA: </div>" + selection.scores[5] + "<br/>";
+
+      //only doing skills for now, maybe do the same for spells and etc
+       modal_body.innerHTML +=  "<div id=\"stat_label\"> Skills </div>";
+      for(let i=0;i<selection.skills.length;i++){
+      modal_body.innerHTML += db.rule.skill[selection.skills[i]].name + "<br/>";
+      }
+      modal_body.innerHTML +=  "</p>";
+		}
 		//console.log("modal appears");
 	}
 }
