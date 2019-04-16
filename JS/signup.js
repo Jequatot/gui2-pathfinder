@@ -22,7 +22,7 @@ function create_login() {
 		if(id == "ALREADY EXISTS")
 			throw "There is already an account under that username.";
 		sessionStorage.setItem("uid", id);
-		window.location.href = "creator.html";
+		document.getElementById("error").innerHTML = "<div style='color:black'>Success! <button> <a href='creator.html'>Log in</a></button></div>";
 	} catch(err) {
 		document.getElementById("error").innerHTML = err;
 	}

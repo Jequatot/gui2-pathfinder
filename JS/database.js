@@ -70,6 +70,7 @@ function push_user(_name, _pwd) {
 		pwd: _pwd,
 		uid: _uid
 	});
+	console.log("SUCCESS!");
 	return _uid;
 }
 
