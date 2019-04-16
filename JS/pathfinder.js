@@ -241,7 +241,7 @@ function character_create(){
   stat[2] = document.getElementById('dex_textbox').value;
   stat[3] = document.getElementById('wis_textbox').value;
   stat[4] = document.getElementById('int_textbox').value;
-  //stat[5] = document.getElementById('cha_textbox').value;
+  stat[5] = document.getElementById('cha_textbox').value;
   //stat[6] = 0;
   current_character.scores = stat;
   console.log((current_character.name));
