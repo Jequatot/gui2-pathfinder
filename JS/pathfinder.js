@@ -248,6 +248,8 @@ function character_create(){
   console.log((current_character.level));
   console.log((current_character.scores));
   console.log((current_character));
+
+  alert("Character information saved");
 }
 
 function character_finalize() {
@@ -255,6 +257,7 @@ function character_finalize() {
 	if(get_pc(uid, pc.name) == "NOT FOUND")
 		push_pc(pc.name, pc.scores, pc.class, pc.race, pc.level, pc.feats, [0], pc.spell, uid, pc.public);
 	else alert("You already have a character of that name.");
+  alert("Character succesfully created!");
 	//function push_pc(name, scores, pclass, race, level, feats, skills, spells, uid, publicity) {
 }
 
