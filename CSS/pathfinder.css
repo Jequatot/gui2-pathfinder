@@ -35,7 +35,7 @@ body{
 */
 
 .tab {
-    min-height: 800px;
+    min-height: 50vh;
 }
 
 /* Set the individual bg colors of the tabs */

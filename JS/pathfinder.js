@@ -250,7 +250,13 @@ function character_create(){
   console.log((current_character));
 }
 
-
+function character_finalize() {
+	var pc = current_character
+	if(get_pc(uid, pc.name) == "NOT FOUND")
+		push_pc(pc.name, pc.scores, pc.class, pc.race, pc.level, pc.feats, [0], pc.spell, uid, pc.public);
+	else alert("You already have a character of that name.");
+	//function push_pc(name, scores, pclass, race, level, feats, skills, spells, uid, publicity) {
+}
 
 //Classes
 
@@ -333,8 +339,12 @@ name_of_spell.textContent = myspell.name;
 name_of_spell = document.getElementById("Spell2_List3");
 name_of_spell.textContent = myspell.name;
 
-un = get_username(sessionStorage.getItem("uid"));
-if(un == "NOT FOUND")
+uid = sessionStorage.getItem("uid");
+un = get_username(uid);
+
+if(un == "NOT FOUND" && uid.length > 6 && uid.length < 14)
+	document.getElementById("welcome").innerHTML = '<div> <p><span id="welcome">You are not logged in.</span> &nbsp ( <a style="color:blue" href = "../index.html">Sign In</a> )</p> If you just created a new account, it may take a minute to process. Thank you for your patience</div>';
+else if(un == "NOT FOUND")
 	document.getElementById("welcome").innerHTML = '<div> <p><span id="welcome">You are not logged in.</span> &nbsp ( <a style="color:blue" href = "../index.html">Sign In</a> )</p></div>';
 else
-	document.getElementById("welcome").innerHTML = '<div> <p><span id="welcome">Welcome ' + uid + '</span> &nbsp ( <a style="color:blue" href = "../index.html">Sign Out</a> )</p></div>';
+	document.getElementById("welcome").innerHTML = '<div> <p><span id="welcome">Welcome ' + un + '</span> &nbsp ( <a style="color:blue" href = "../index.html">Sign Out</a> )</p></div>';

@@ -60,9 +60,10 @@
             <li><a href="#tabs-1">Character</a></li>
             <li><a href="#tabs-2">Classes</a></li>
             <li><a href="#tabs-3">Races</a></li>
+            <li><a href="#tabs-6">Stats</a></li>
             <li><a href="#tabs-4">Spells</a></li>
             <li><a href="#tabs-5">Feats</a></li>
-            <li><a href="#tabs-6">Stats</a></li>
+            <li><a href="#tabs-7">Finalize</a></li>
         </ul>
 
         <!-- Tab Content -->
@@ -234,6 +235,11 @@
             </form>
           </div>
         </div>
+		
+        <div id="tabs-7" class="tab">
+                <button type='button' onclick='character_finalize()' >Create</button>
+		
+        </div>
         <div id = "tabs-6" class = "tab"
           <div id = "stats_bg" class = "selection_bg">
             <form>
@@ -241,6 +247,7 @@
               <input type ="text" id ="Character_name"><br/>
           <!-- Input for base character stats -->
               <p> Character base stats</p>
+              <p> Note: these are affected by your class and race. In the future we will show you how.</p>
               <table>
                 <tr>
                   <div class="stat_label", name = "level_label">
