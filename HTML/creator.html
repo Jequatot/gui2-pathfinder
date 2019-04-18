@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
 
     <!-- Links to the pathfinder CSS -->
     <link rel="stylesheet" href="../CSS/pathfinder.css"/>
@@ -35,7 +36,6 @@
     <!-- EX JS file -->
     <script src="../JS/example.js"></script>
 
-    <meta charset="utf-8">
     <title>Chatacter Editor - UML Pathfinder Group 6</title>
   </head>
   <body>
@@ -61,7 +61,7 @@
             <li><a href="#tabs-2">Classes</a></li>
             <li><a href="#tabs-3">Races</a></li>
             <li><a href="#tabs-6">Stats</a></li>
-            <li><a href="#tabs-4">Spells</a></li>
+            <li id="spelltab" style="display:none"><a href="#tabs-4">Spells</a></li>
             <li><a href="#tabs-5">Feats</a></li>
             <li><a href="#tabs-7">Finalize</a></li>
         </ul>
@@ -175,37 +175,34 @@
 
         <!-- Spells Tab -->
         <div id="tabs-4" class="tab">
-            <div id="spells_bg" class="selection_bg">
-                <!-- Hardcoded for now, probably want to make this dynamic -->
-                <p>Level 0 Spells</p>
-
-                <!-- Drop-down 1 -->
-                <select>
-                  <option id="Spell1_List1" value = ""> spell1 </option>
-                  <option id="Spell2_List1" value = ""> spell2 </option>
-                </select>
-                <br></br>
-
-                <!-- Drop-down 2 -->
-                <select>
-                  <option id="Spell1_List2" value = ""> spell1 </option>
-                  <option id="Spell2_List2" value = ""> spell2 </option>
-                </select>
-                <br></br>
-
-                <!-- Drop-down 3 -->
-                <select>
-                  <option id="Spell1_List3" value = ""> spell1 </option>
-                  <option id="Spell2_List3" value = ""> spell2 </option>
-                </select>
-                <br></br>
-            </div>
+          <div id="spells_bg">
+              Based on your selected class, you will have a number of magic spells
+               you can use.<br/>
+              During a rest, you prepare whichever spells you want from the list
+              below. You can prepare a spell multiple times for multiple uses.<br/>
+              Until you rest again, you may cast each spell for as many times as
+              you prepared it.<br/>
+              You may only cast spells you have prepared.<br/>
+              <div id="spellerror"></div>
+              <div id="spell_chart" class="chart">
+                  <!-- Feat Chart Heading -->
+                  <div class="name_box"><p>Name</p></div>
+                  <div class="name_box">View</div>
+                  <div class="name_box"><p>Uses</p></div>
+                  <div class="name_box"><p>Remove</p></div>
+                  <table id="preparedspelllabel_lv0"></table>
+                  <table id="preparedspelllabel_lv1"></table>
+                  <!-- The feats will be dynamically added to this area in JS -->
+              </div>
+            <div id="spell_level_buttons"></div>
+            Level:
+          </div>
         </div>
 
         <!-- Feats Tab -->
         <div id="tabs-5" class="tab">
           <div id="feats_bg">
-              <div id="Feat_Chart">
+              <div id="Feat_Chart" class="chart">
                   <!-- Feat Chart Heading -->
                   <div id="feat_chart_name" class="name_box"><p>Feat Name</p></div>
                   <div id="feat_chart_prereq" class="name_box"><p>Prereq</p></div>
@@ -216,7 +213,7 @@
               </div>
 
             <!-- The three forms -->
-            <form>
+            <form style="overflow:scroll;max-height:80vh">
               Name of Feat:<br>
                <textarea id="feat_name_textbox" rows="1" cols="30"></textarea>
                <br>
@@ -299,6 +296,13 @@
                 <div class="stat_label", name = "cha_label">
                     <td align = "left">CHA:</td>
                    <td align="right"> <input type="text" id="cha_textbox" value=""/ >
+                   </td>
+                 </div>
+              </tr>
+              <tr>
+				<div>
+					<td align = "left">Make public?:</td>
+                   <td align="right"> <input type="checkbox" id="public_box" value=""/ >
                    </td>
                  </div>
               </tr>

@@ -18,7 +18,6 @@ function push_pc(name, scores, pclass, race, level, feats, skills, spells, uid, 
 }
 
 function push_init() {
-
 	return firebase.database()
 }
 
@@ -108,6 +107,31 @@ function get_pc(_uid, _name) {
 	for(i = 0; i < arr.length; i++) {
 		if(arr[i].name == _name && arr[i].uid == _uid) {
 			return arr[i];
+		}
+	}
+	return "NOT FOUND";
+}
+
+function get_spell(_name) {
+	var arr = db.rule.spell;
+	for(i = 0; i < arr.length; i++) {
+		if(arr[i].name == _name) {
+			return arr[i];
+		}
+	}
+	return "NOT FOUND";
+}
+
+function delete_pc(_uid, _name) {
+	dbref = push_init();
+	var arr = db.pc;
+	for(i = 0; i < arr.length; i++) {
+		if(arr[i].name == _name && arr[i].uid == _uid) {
+			var pc = dbref.ref("pc").child(i);
+			pc.set({
+				name : "<REMOVED>"
+			});
+			return _uid
 		}
 	}
 	return "NOT FOUND";

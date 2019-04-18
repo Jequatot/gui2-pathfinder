@@ -11,9 +11,8 @@ body{
     background-image: linear-gradient(black, #831600);
   	background-repeat: repeat-x;
     #background-color: #831600;
-    #min-height: 2000px;
     min-height: 100vh;
-    #min-width: 800px;
+    overflow: hidden;
 }
 /*Customizes the tabs - an example Sam had from GUI I
 #tabs{
@@ -65,9 +64,6 @@ body{
 	background-color:#9966ff;
     #min-height: 800px;
 }
-#Feat_Chart{
-    background-color: white;
-}
 
 /*Sets the White bg color found in Classes and Races tabs*/
 .selection_bg
@@ -116,7 +112,8 @@ body{
 }
 
 /* Styles the Feat chart */
-#Feat_Chart{
+.chart{
+    background-color: white;
     float: right;
     border-style: solid;
     border-color: black;
@@ -125,7 +122,17 @@ body{
     min-width: 700px;
     max-height: 800px;
     text-align: center;
-	overflow: scroll;
+    overflow: scroll;
+}
+
+.spellchart{
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 1px;
+    max-height: 70vh;
+    text-align: center;
+    overflow: scroll;
 }
 
 /* Styles the feat textboxes */
@@ -178,7 +185,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
+  overflow: scroll;
+  max-height: 80vh;
 }
 
 /* Add Animation */
