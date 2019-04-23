@@ -160,7 +160,21 @@ table {
     max-height: 200px;
 }
 
+.stat_description{
+    display:none;
 
+}
+td:hover .stat_description{
+    display:block;
+    position:absolute;
+    text-align: center;
+    border:1px solid #000;
+    width:400px;
+    height:75px;
+    background-color: white;
+    font-weight: bold;
+    {font-size-adjust: 0.58;
+}
 /* #########################################################################
   This is the css for modal that was taken from w3school
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
