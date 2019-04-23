@@ -61,7 +61,7 @@
             <li><a href="#tabs-2">Classes</a></li>
             <li><a href="#tabs-3">Races</a></li>
             <li><a href="#tabs-6">Stats</a></li>
-            <li id="spelltab" style="display:none"><a href="#tabs-4">Spells</a></li>
+            <li><a href="#tabs-4">Spells</a></li>
             <li><a href="#tabs-5">Feats</a></li>
             <li><a href="#tabs-7">Finalize</a></li>
         </ul>
@@ -176,6 +176,7 @@
         <!-- Spells Tab -->
         <div id="tabs-4" class="tab">
           <div id="spells_bg">
+            <h2 id="spellerror"></h2>
               Based on your selected class, you will have a number of magic spells
                you can use.<br/>
               During a rest, you prepare whichever spells you want from the list
@@ -183,7 +184,6 @@
               Until you rest again, you may cast each spell for as many times as
               you prepared it.<br/>
               You may only cast spells you have prepared.<br/>
-              <div id="spellerror"></div>
               <div id="spell_chart" class="chart">
                   <!-- Feat Chart Heading -->
                   <div class="name_box"><p>Name</p></div>
@@ -241,15 +241,15 @@
         </div>
 
         <!-- Stats Tab -->
-        <div id = "tabs-6" class = "tab"
-          <div id = "stats_bg" class = "selection_bg">
+        <div id = "tabs-6" class="tab"
+          <div id = "stats_bg">
             <form>
               <label>Enter your character's name: </label>
               <input type ="text" id ="Character_name"><br/>
           <!-- Input for base character stats -->
               <p> Character base stats</p>
               <p> Note: these are affected by your class and race. In the future we will show you how.</p>
-              <table>
+              <table class="selection_bg">
                 <tr>
                   <div class="stat_label", name = "level_label">
                       <td align = "left">Level:</td>

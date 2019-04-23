@@ -162,7 +162,7 @@ function assign_modal() {
   			modal_body.innerHTML = "<p>" + selection.name + "<br/>" + selection.short_desc + "</p>";
 
   		} else if(vbid[1] == "spell") {
-  			selection = get_spell(vbid[2]);
+  			selection = db.rule.spell[get_spell(vbid[2])];
   			modal_title.innerHTML = selection.name;
   			modal_body.innerHTML = "<p>" + selection.name + "<br/>" + selection.long_desc + "</p>";
 
@@ -191,10 +191,10 @@ function assign_modal() {
         // currently if there are no spells it will be empty with Spells label only
         // probably a good idea to make this not show if there are no spells available
         //if()
-        try{
+        try {
           modal_body.innerHTML +=  "<div class=\"stat_label\"> Spells </div>";
-          for(let J=0;j<selection.spells.length;j++){
-            modal_body.innerHTML += db.rule.spell[selection.spell[j]].name + "<br/>";
+          for(let j=0;j<selection.spells.length;j++){
+            modal_body.innerHTML += db.rule.spell[selection.spells[j]].name + "<br/>";
           }
           modal_body.innerHTML +=  "<br/>";
         } catch(error) {}
@@ -234,14 +234,14 @@ window.onclick = function(event) {
 
 var current_character = {
   class: 0,
-  feats: 1, //dont' forget to change this back to zero!
+  feats: 0,
   level: 0,
   name: 0,
   public: 0,
   race: 0,
   scores: 0,
   skills: 0,
-  spell: 0,
+  spell: [],
   uid: 0
 };
 //changes class when clicked
@@ -385,34 +385,35 @@ function spelldisplay(lv) {
 
 var spellchartformat = "<tr><th>Name</th><th></th><th></th></tr>";
 spellsbg = document.getElementById("spells_bg");
-spellsbg.innerHTML += "<table id='spellchart-lv0' class='spellchart' style='max-height:50vh'>" + spellchartformat + "</table>";
+spellsbg.innerHTML += "<table id='spellchart-lv0' class='spellchart' style='display:none;max-height:50vh'>" + spellchartformat + "</table>";
 for(i = 0; i < 10; i++) {
   spellsbg.innerHTML += "<table id='spellchart-lv" + i + "' class='spellchart' style='display:none;max-height:50vh'>" + spellchartformat + "</table>";
 }
 
-//triggers when class is changed
+//triggers when class or level is changed
 function populate_spells() {
   var noncasters = ["0", "4", "5", "8"];
   if(noncasters.includes(current_character.class)) {
     document.getElementById("spellerror").innerHTML = "Your selected class is not a spellcaster.";
-    document.getElementById("spelltab").style.display = "none";
     return;
   }
   try{
     max_spell_level = db.rule.class[current_character.class].level_bonus[current_character.level - 1].spellcount.length;
   } catch(error) {
-    document.getElementById("spellerror").innerHTML = "Make sure you select a valid level first in the stats tab.";
+    document.getElementById("spellerror").innerHTML = "Make sure you select a valid level first in the stats tab.<br>If your level is valid (between 1-20) spell selection may not yet be implemented for your class at this level. Sorry!";
     return;
   }
+  document.getElementById("spellerror").innerHTML = "";
   var spellsbg = document.getElementById("spell_level_buttons");
+  spellsbg.innerHTML = "";
   for(i = 0; i < 10; i++) {
     spellsbg.innerHTML += "<button onclick='spelldisplay(" + i + ")'" + (i > max_spell_level - 1 ? "disabled" : "") + ">" + i + "</button>";
   }
   for(i = 0; i < max_spell_level; i++) {
       document.getElementById("spellchart-lv" + i).innerHTML = spellchartformat;
+      console.log(i);
       document.getElementById("preparedspelllabel_lv" + i).innerHTML = "<tr><td>Level " + i + "</td><td></td><td id='preparedspelllabeluses_lv" + i + "''>0/" + db.rule.class[current_character.class].level_bonus[current_character.level - 1].spellcount[i] + "</td></tr>";
   }
-  document.getElementById("spelltab").style.display = "block";
   for(i = 0; i < db.rule.spell.length; i++) {
     lv = db.rule.spell[i].level[current_character.class];
     if(lv >= 0)
@@ -426,6 +427,7 @@ function populate_spells() {
 var totalspellcount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function prepare_spell(name, lv) {
+  current_character.spell.push(get_spell(name));
   try {
     document.getElementById("preparedspelluses_" + name).value++;
     update_spellcount(lv, 1);
@@ -450,6 +452,8 @@ function prepare_spell(name, lv) {
 }
 
 function unprepare_spell(name, lv) {
+  current_character.spell.splice(current_character.spell.index(get_spell(name)))
+
   n = document.getElementById("preparedspell_" + name);
   update_spellcount(lv, document.getElementById("preparedspelluses_" + name).value * -1);
   n.parentNode.removeChild(n);

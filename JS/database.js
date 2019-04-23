@@ -60,7 +60,10 @@ function push_user(_name, _pwd) {
 	do {
 		_uid = "";
 	for(i = 0; i < 8; i++) {
-		_uid += String.fromCharCode(48 + Math.floor(Math.random()*74))
+		charint = 48 + Math.floor(Math.random()*69);
+		if(charint > 90)
+			charint += 5;
+		_uid += String.fromCharCode(charint)
 		}
 	} while(db.login.user.includes(_uid))
 
@@ -116,7 +119,7 @@ function get_spell(_name) {
 	var arr = db.rule.spell;
 	for(i = 0; i < arr.length; i++) {
 		if(arr[i].name == _name) {
-			return arr[i];
+			return i;
 		}
 	}
 	return "NOT FOUND";
