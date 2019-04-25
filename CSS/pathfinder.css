@@ -164,6 +164,7 @@ table {
     display:none;
 
 }
+
 td:hover .stat_description{
     display:block;
     position:absolute;
@@ -173,8 +174,9 @@ td:hover .stat_description{
     height:75px;
     background-color: white;
     font-weight: bold;
-    {font-size-adjust: 0.58;
+    font-size-adjust: 0.58;
 }
+
 /* #########################################################################
   This is the css for modal that was taken from w3school
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
