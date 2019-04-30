@@ -285,7 +285,7 @@ function update_final_page() {
   //alert("character transfered to finalize");
   final_page.innerHTML = "<p>"
   + "<span class=\"stat_label\"> Name: </div>" + current_character.name + "<br/>"
-  + "<span class=\"stat_label\"> Class: </div>" + current_character.class + "<br/>"
+  + "<span class=\"stat_label\"> Class: </div>" + db.rule.class[current_character.class].name+ "<br/>"
   + "<span class=\"stat_label\"> Race: </div>" +  current_character.race + "<br/>"
   + "<span class=\"stat_label\"> Level: </div>" +  current_character.level + "<br/>"
   + "<span class=\"stat_label\"> CON: </div>" +  current_character.scores[0] + "<br/>"
