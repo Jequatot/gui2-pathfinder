@@ -308,8 +308,8 @@ function update_final_page() {
     for(let j=0;j<current_character.spells.length;j++){
       final_page.innerHTML += db.rule.spell[current_character.spells[j]].name + "<br/>";
     }
-    final_page.innerHTML +=  "<br/>";
   } catch(error) {}
+      final_page.innerHTML +=  "<br/>";
    //need to know specifically which feats to asign and output and what to do when there are none
    // if()
   try {
@@ -318,7 +318,7 @@ function update_final_page() {
       final_page.innerHTML += db.rule.class_feats[current_character.feats[j]].name + "<br/>";
     }
   } catch(error) {}
-
+  final_page.innerHTML +=  "<br/>";
   final_page.innerHTML +=  "</p>";
 }
 
