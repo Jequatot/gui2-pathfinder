@@ -159,7 +159,10 @@ table {
     min-height: 200px;
     max-height: 200px;
 }
-
+#final_stat{
+  width: 50%;
+  border-style: solid;
+}
 .stat_description{
     display:none;
 

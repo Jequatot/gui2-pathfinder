@@ -273,8 +273,52 @@ function character_create(){
   //console.log((current_character.scores));
   //console.log((current_character));
 
+
   populate_spells();
+  update_final_page();
   alert("Character information saved");
+}
+
+function update_final_page() {
+  final_page = getElementById("#final_stat");
+
+  final_page.innerHTML = "<p>"
+  + "<span class=\"stat_label\"> Name: </div>" + current_character.name + "<br/>"
+  + "<span class=\"stat_label\"> Class: </div>" + current_character.class + "<br/>"
+  + "<span class=\"stat_label\"> Race: </div>" +  current_character.race + "<br/>"
+  + "<span class=\"stat_label\"> Level: </div>" +  current_character.level + "<br/>"
+  + "<span class=\"stat_label\"> CON: </div>" +  current_character.scores[0] + "<br/>"
+  + "<span class=\"stat_label\"> STR: </div>" +  current_character.scores[1] + "<br/>"
+  + "<span class=\"stat_label\"> DEX: </div>" +  current_character.scores[2] + "<br/>"
+  + "<span class=\"stat_label\"> WIS: </div>" +  current_character.scores[3] + "<br/>"
+  + "<span class=\"stat_label\"> INT: </div>" +  current_character.scores[4] + "<br/>"
+  + "<span class=\"stat_label\"> CHA: </div>" +  current_character.scores[5] + "<br/>";
+
+  final_page.innerHTML +=  "<div class=\"stat_label\"> Skills </div>";
+  for(let j=0;j<current_character.skills.length;j++){
+    final_page.innerHTML += db.rule.skill[current_character.skills[j]].name + "<br/>";
+  }
+  final_page.innerHTML +=  "<br/>";
+  // currently if there are no spells it will be empty with Spells label only
+  // probably a good idea to make this not show if there are no spells available
+  //if()
+  try {
+    final_page.innerHTML +=  "<div class=\"stat_label\"> Spells </div>";
+    for(let j=0;j<current_character.spells.length;j++){
+      final_page.innerHTML += db.rule.spell[current_character.spells[j]].name + "<br/>";
+    }
+    final_page.innerHTML +=  "<br/>";
+  } catch(error) {}
+   //need to know specifically which feats to asign and output and what to do when there are none
+   // if()
+  try {
+    final_page.innerHTML +=  "<div class=\"stat_label\"> Feats </div>";
+    for(let i=0;i<current_character.feats.length;j++){
+      final_page.innerHTML += db.rule.class_feats[current_character.feats[j]].name + "<br/>";
+    }
+  } catch(error) {}
+
+  final_page.innerHTML +=  "</p>";
 }
 
 function character_finalize() {
