@@ -161,6 +161,7 @@ table {
 }
 #final_stat{
   width: 50%;
+  min-height: 50%;
   border-style: solid;
 }
 .stat_description{
