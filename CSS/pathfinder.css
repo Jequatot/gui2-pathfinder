@@ -244,11 +244,13 @@ edit as needed
   text-decoration: none;
   cursor: pointer;
 }
-
+.title_portion{
+  margin-top: 20px;
+}
 .modal-header {
   padding: 2px 1px;
   height: 40px;
-  background-color: #5cb85c;
+  background-color: red;
   color: white;
 }
 
