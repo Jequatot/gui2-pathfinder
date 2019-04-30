@@ -275,13 +275,13 @@ function character_create(){
 
 
   populate_spells();
-  update_final_page();
   alert("Character information saved");
+  update_final_page();
 }
 
 function update_final_page() {
   final_page = getElementById("#final_stat");
-
+alert("character transfered to finalize");
   final_page.innerHTML = "<p>"
   + "<span class=\"stat_label\"> Name: </div>" + current_character.name + "<br/>"
   + "<span class=\"stat_label\"> Class: </div>" + current_character.class + "<br/>"
