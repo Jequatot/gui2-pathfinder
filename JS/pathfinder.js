@@ -280,7 +280,7 @@ function character_create(){
 }
 
 function update_final_page() {
-  var final_page = getElementById("final_stat");
+  var final_page = document.getElementById("final_stat");
   alert("character transfered to finalize");
   final_page.innerHTML = "<p>"
   + "<span class=\"stat_label\"> Name: </div>" + current_character.name + "<br/>"
